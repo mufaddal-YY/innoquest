@@ -2,7 +2,7 @@
 
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
 
-const ProgressBar = () => {
+const ProgressBars = () => {
   return (
     <ProgressBar height="4px"
     color="#E36C0A"
@@ -11,4 +11,4 @@ const ProgressBar = () => {
   );
 };
 
-export default ProgressBar;
+export default ProgressBars;

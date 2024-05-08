@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import ProgressBar from "@/components/Nav/ProgressBar";
+import ProgressBars from "@/components/Nav/ProgressBar";
 import { Suspense } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <Suspense>
-          <ProgressBar />
+          <ProgressBars />
         </Suspense>
       </body>
     </html>
