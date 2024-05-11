@@ -22,7 +22,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className="!scroll-smooth">
       <body className={poppins.className}>
         <Header />
-        {children}
+        <main className="mt-14">{children}</main>
+
         <Footer />
         <Suspense>
           <ProgressBars />

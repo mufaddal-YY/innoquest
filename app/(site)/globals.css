@@ -78,3 +78,7 @@
   .container {
     @apply max-w-7xl mx-auto items-center
   }
+
+  .bg-primary {
+    @apply bg-[#222631]
+  }

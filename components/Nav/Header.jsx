@@ -29,7 +29,7 @@ import { AlignJustify } from "lucide-react";
 
 const Header = () => {
   return (
-    <main className="bg-[#222631] fixed w-full z-10">
+    <main className="bg-primary fixed w-full top-0 z-10">
       <nav className="container py-3 ">
         <article className="flex flex-row justify-between items-center gap-4">
           <div className="flex flex-row justify-between items-center gap-4">
