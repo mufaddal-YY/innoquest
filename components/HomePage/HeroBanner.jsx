@@ -3,35 +3,34 @@
 import Image from "next/image";
 import { TextGenerateEffect } from "../ui/textEffect";
 
-const words = `“You can dream, create, design and build the most wonderful place in the world…but it
-requires people to make the dream a reality.”
-`;
-
-const HeroBanner = () => {
+const HeroBanner = ({ homeData }) => {
   return (
-    <main className="bg-primary">
-      <section className="container py-[100px]">
-        <article className="flex justify-between items-center">
-          <div className="w-full lg:w-1/2">
-            <h4 className="mb-2">
-              <TextGenerateEffect words={words} />
-            </h4>
+    <main
+      className="bg-primary lg:h-screen items-center"
+      style={{
+        backgroundImage: "url('./heroBg.png')",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}>
+      {homeData.map((item) => (
+        <section className="container py-[100px] items-center">
+          <article className="flex flex-col lg:flex-row justify-between items-center">
+            <div className="w-full lg:w-7/12">
+              <h4 className="mb-2">
+                <TextGenerateEffect words={item.headline} />
+              </h4>
 
-            <span className="text-white mt-2 text-sm">-Walt Disney</span>
+              <span className="text-white mb-4 text-sm">-Walt Disney</span>
 
-            <p className="text-gray-200 pt-4">
-              At InnoQuest Consulting, we specialize in matching top talent with
-              ideal opportunities, making us your dedicated allies in achieving
-              excellence. Our pledge is to revolutionize recruitment practices
-              to deliver unparalleled excellence driven by our relentless
-              pursuit of innovation.
-            </p>
-          </div>
-          <div className="w-full lg:w-1/2 p-4">
-            <Image src={""} width={600} height={400} />
-          </div>
-        </article>
-      </section>
+              <p className="text-gray-300 py-4 text-sm lg:text-lg">{item.subHeadline}</p>
+            </div>
+            <div className="w-full lg:w-5/12 p-2 flex mb-4 justify-center items-center order-first lg:order-last">
+              <Image src={item.heroImage} width={600} height={400} />
+            </div>
+          </article>
+        </section>
+      ))}
     </main>
   );
 };

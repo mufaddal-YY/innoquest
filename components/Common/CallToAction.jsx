@@ -2,7 +2,9 @@ import React from 'react'
 
 const CallToAction = () => {
   return (
-    <div>CallToAction</div>
+    <main className='container'>
+
+    </main>
   )
 }
 

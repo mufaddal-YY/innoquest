@@ -23,7 +23,6 @@ export default function RootLayout({ children }) {
       <body className={poppins.className}>
         <Header />
         <main className="mt-14">{children}</main>
-
         <Footer />
         <Suspense>
           <ProgressBars />

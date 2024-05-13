@@ -1,10 +1,18 @@
+import Testimonials from "@/components/Common/Testimonials";
 import HeroBanner from "@/components/HomePage/HeroBanner";
-import Image from "next/image";
+import Services from "@/components/HomePage/Services";
+import Stats from "@/components/HomePage/Stats";
+import { getClientTestimonialsData, getHomeData } from "@/sanity/sanity_utils";
 
-export default function Home() {
+export default async function Home() {
+  const homeData = await getHomeData();
+  const testimonialsData = await getClientTestimonialsData();
   return (
     <main>
-      <HeroBanner />
+      <HeroBanner homeData={homeData} />
+      <Testimonials testimonialsData={testimonialsData} />
+      <Services homeData={homeData} />
+      <Stats homeData={homeData} />
     </main>
   );
 }
