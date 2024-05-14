@@ -11,7 +11,7 @@ const Footer = async () => {
     <main className="bg-white py-[50px] items-center ">
       <section className="container items-center flex flex-col lg:flex-row justify-between">
         <article>
-          <div className="bg-primary px-4 py-2 items-center">{Logo}</div>
+          <div className="bg-primary px-4 py-2 mb-4 items-center">{Logo}</div>
         </article>
         <article>
           {contactData.map((item) => (
@@ -42,9 +42,12 @@ const Footer = async () => {
             © 2024 Innoquest | All Rights Reserved.
           </span>
         </article>
-        <article> <span className="text-sm font-regular text-gray-600">
+        <article>
+          {" "}
+          <span className="text-sm font-regular text-gray-600">
             Privacy Policy | Terms and Conditions
-          </span></article>
+          </span>
+        </article>
       </section>
     </main>
   );

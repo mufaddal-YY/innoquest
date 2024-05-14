@@ -48,7 +48,7 @@ const Stats = ({ homeData }) => {
                     {({ isVisible }) => (
                       <div className="border border-red-400 bg-red-400 rounded-xl h-[150px] lg:h-[250px] flex flex-col justify-center items-center p-2">
                         {" "}
-                        <h1 className="md:text-5xl lg:text-7xl text-3xl font-semibold text-white">
+                        <h1 className="md:text-5xl lg:text-7xl text-4xl font-semibold text-white">
                           {isVisible && (
                             <CountUp
                               duration={5}
@@ -69,7 +69,7 @@ const Stats = ({ homeData }) => {
                   <VisibilitySensor partialVisibility={true} delayedCall={true}>
                     {({ isVisible }) => (
                       <div className="border border-blue-600 bg-blue-600 rounded-xl h-[150px] lg:h-[250px] flex flex-col justify-center items-center p-2">
-                        <h1 className="md:text-5xl lg:text-7xl text-3xl font-semibold text-white">
+                        <h1 className="md:text-5xl lg:text-7xl text-4xl font-semibold text-white">
                           {isVisible && (
                             <CountUp
                               duration={5}
@@ -90,7 +90,7 @@ const Stats = ({ homeData }) => {
                   <VisibilitySensor partialVisibility={true} delayedCall={true}>
                     {({ isVisible }) => (
                       <div className="border border-yellow-500 bg-yellow-500 rounded-xl h-[150px] lg:h-[250px] flex flex-col justify-center items-center p-2">
-                        <h1 className="md:text-5xl lg:text-7xl text-3xl font-semibold text-white">
+                        <h1 className="md:text-5xl lg:text-7xl text-4xl font-semibold text-white">
                           {isVisible && (
                             <CountUp
                               duration={5}
@@ -111,7 +111,7 @@ const Stats = ({ homeData }) => {
                   <VisibilitySensor partialVisibility={true} delayedCall={true}>
                     {({ isVisible }) => (
                       <div className="border border-teal-500 bg-teal-500 rounded-xl h-[150px] lg:h-[250px] flex flex-col justify-center items-center p-2">
-                        <h1 className="md:text-5xl lg:text-7xl text-3xl font-semibold text-white">
+                        <h1 className="md:text-5xl lg:text-7xl text-4xl font-semibold text-white">
                           {isVisible && (
                             <CountUp
                               duration={5}

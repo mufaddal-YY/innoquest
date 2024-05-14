@@ -1,3 +1,4 @@
+import CallToAction from "@/components/Common/CallToAction";
 import Testimonials from "@/components/Common/Testimonials";
 import HeroBanner from "@/components/HomePage/HeroBanner";
 import Services from "@/components/HomePage/Services";
@@ -13,6 +14,7 @@ export default async function Home() {
       <Testimonials testimonialsData={testimonialsData} />
       <Services homeData={homeData} />
       <Stats homeData={homeData} />
+      <CallToAction />
     </main>
   );
 }

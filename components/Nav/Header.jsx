@@ -15,13 +15,9 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
+
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import { Separator } from "@/components/ui/separator";
 import { Button } from "../ui/button";

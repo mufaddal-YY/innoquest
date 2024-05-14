@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiMiniArrowLongLeft } from "react-icons/hi2";
 import { FaStar } from "react-icons/fa";
+import { Separator } from "../ui/separator";
 
 const Testimonials = ({ testimonialsData }) => {
   const settings = {
@@ -69,15 +70,16 @@ const Testimonials = ({ testimonialsData }) => {
             </div>
           </div>
         </article>
-        <hr />
+        
       </section>
+      <Separator className="my-2" />
 
-      <section className="container pt-2 items-center">
+      <section className="container mt-8 items-center">
         <Slider ref={sliderRef} {...settings} className="flex justify-between items-center">
           {testimonialsData.map((item, index) => (
             <div className="p-2" key={index}>
               <div
-                className="lg:h-[350px] h-full items-center border border-[#E36C0A] rounded-xl text-gray-700 hover:text-gray-300 bg-white hover:bg-primary hover:duration-1000 p-4"
+                className="lg:h-[350px] h-full items-center border border-[#E36C0A] rounded-2xl text-gray-700 hover:text-gray-300 bg-white hover:bg-primary hover:duration-1000 p-4"
                 style={{
                   backgroundImage: "url('./testimonialsBg.png')",
                   backgroundPosition: "right bottom",
