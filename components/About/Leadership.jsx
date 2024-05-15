@@ -35,7 +35,7 @@ const myPortableTextComponents = {
 
 const Leadership = ({ aboutData }) => {
   return (
-    <main className="bg-white flex items-center">
+    <main className="bg-white flex items-center" id="leadership">
       <section className="container py-[50px] flex flex-col items-center">
         {aboutData.map((item, index) => (
           <article key={index} className="">

@@ -33,7 +33,7 @@ const myPortableTextComponents = {
 
 const NicheHiring = ({ employerData }) => {
   return (
-    <main className="bg-white flex items-center lg:h-screen">
+    <main className="bg-white flex items-center lg:h-screen" id="niche-hiring">
       <section className="container py-[50px] flex flex-col items-center">
         {employerData.map((item, index) => (
           <article

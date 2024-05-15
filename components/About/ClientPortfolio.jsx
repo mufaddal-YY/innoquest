@@ -37,7 +37,7 @@ const myPortableTextComponents = {
 const ClientPortfolio = ({ aboutData }) => {
   return (
     <>
-      <main className="bg-gray-100 items-center">
+      <main className="bg-gray-100 items-center" id="industries">
         <section className="container py-[50px] flex flex-col items-center">
           {aboutData.map((item, index) => (
             <article key={index} className="">

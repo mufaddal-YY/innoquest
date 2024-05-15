@@ -58,13 +58,18 @@ const Header = () => {
                           </Link>
 
                           <Separator className="my-2" />
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Niche Hiring
-                          </li>
+                          <Link href={"/employer-services/#niche-hiring"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Niche Hiring
+                            </li>
+                          </Link>
                           <Separator className="my-2" />
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Recruitment Efficiency Solutions
-                          </li>
+                          <Link
+                            href={"/employer-services/#recruitment-solutions"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Recruitment Efficiency Solutions
+                            </li>
+                          </Link>
                         </ul>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
@@ -83,21 +88,29 @@ const Header = () => {
                       </Link>
                       <NavigationMenuContent>
                         <ul className="bg-[#222631] w-[350px] px-2 py-2 text-white border-[#222631]">
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Career Opportunities
-                          </li>
+                          <Link href={"/career-services/#career-opportunities"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Career Opportunities
+                            </li>
+                          </Link>
                           <Separator className="my-2" />
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Career Compass
-                          </li>
+                          <Link href={"/career-services/#career-compass"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Career Compass
+                            </li>
+                          </Link>
                           <Separator className="my-2" />
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Professional Portfolio Crafting
-                          </li>
+                          <Link href={"/career-services/#portfolio-crafting"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Professional Portfolio Crafting
+                            </li>
+                          </Link>
                           <Separator className="my-2" />
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Career Accelerator Program
-                          </li>
+                          <Link href={"/career-services/#career-accelerator"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Career Accelerator Program
+                            </li>
+                          </Link>
                         </ul>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
@@ -114,29 +127,41 @@ const Header = () => {
                       </Link>
                       <NavigationMenuContent>
                         <ul className="bg-[#222631] w-[350px] px-2 py-2 text-white border-[#222631]">
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Our Story
-                          </li>
+                          <Link href={"/about/#our-story"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Our Story
+                            </li>
+                          </Link>
                           <Separator className="my-2" />
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Advantage InnoQuest
-                          </li>
+                          <Link href={"/about/#advantage-innoquest"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Advantage InnoQuest
+                            </li>
+                          </Link>
                           <Separator className="my-2" />
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Industries
-                          </li>
+                          <Link href={"/about/#industries"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Industries
+                            </li>{" "}
+                          </Link>
                           <Separator className="my-2" />
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Leadership Team
-                          </li>
+                          <Link href={"/about/#leadership"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Leadership Team
+                            </li>{" "}
+                          </Link>
                           <Separator className="my-2" />
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Our Teams
-                          </li>
+                          <Link href={"/about/#team"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Our Teams
+                            </li>{" "}
+                          </Link>
                           <Separator className="my-2" />
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Values
-                          </li>
+                          <Link href={"/about/#our-values"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Values
+                            </li>{" "}
+                          </Link>
                         </ul>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
@@ -178,31 +203,46 @@ const Header = () => {
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[350px] p-2 text-white border-[#222631] z-50">
                               <SheetClose>
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Executive Search Solutions
-                                </li>
+                                <Link
+                                  href={"/employer-services/#executive-search"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Executive Search Solutions
+                                  </li>
+                                </Link>
                               </SheetClose>
                               <Separator className="my-2" />
                               <SheetClose>
                                 {" "}
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Professional Search Solutions
-                                </li>
+                                <Link
+                                  href={
+                                    "/employer-services/#professional-search"
+                                  }>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Professional Search Solutions
+                                  </li>
+                                </Link>
                               </SheetClose>
 
                               <Separator className="my-2" />
                               <SheetClose>
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Niche Hiring
-                                </li>
+                                <Link href={"/employer-services/#niche-hiring"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Niche Hiring
+                                  </li>{" "}
+                                </Link>
                               </SheetClose>
 
                               <Separator className="my-2" />
                               <SheetClose>
                                 {" "}
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Recruitment Efficiency Solutions
-                                </li>
+                                <Link
+                                  href={
+                                    "/employer-services/#recruitment-solutions"
+                                  }>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Recruitment Efficiency Solutions
+                                  </li>
+                                </Link>
                               </SheetClose>
                             </ul>
                           </NavigationMenuContent>
@@ -222,29 +262,42 @@ const Header = () => {
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[350px] p-2 text-white border-[#222631] z-50">
                               <SheetClose>
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Career Opportunities
-                                </li>
+                                <Link
+                                  href={
+                                    "/career-services/#career-opportunities"
+                                  }>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Career Opportunities
+                                  </li>
+                                </Link>
                               </SheetClose>
                               <Separator className="my-2" />
                               <SheetClose>
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Career Compass
-                                </li>
+                                <Link href={"/career-services/#career-compass"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Career Compass
+                                  </li>
+                                </Link>
                               </SheetClose>
 
                               <Separator className="my-2" />
                               <SheetClose>
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Professional Portfolio Crafting
-                                </li>
+                                <Link
+                                  href={"/career-services/#portfolio-crafting"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Professional Portfolio Crafting
+                                  </li>
+                                </Link>
                               </SheetClose>
 
                               <Separator className="my-2" />
                               <SheetClose>
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Career Accelerator Program
-                                </li>
+                                <Link
+                                  href={"/career-services/#career-accelerator"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Career Accelerator Program
+                                  </li>
+                                </Link>
                               </SheetClose>
                             </ul>
                           </NavigationMenuContent>
@@ -262,45 +315,57 @@ const Header = () => {
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[350px] p-2 text-white border-[#222631]">
                               <SheetClose>
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Our Story
-                                </li>
+                                <Link href={"/about/#our-story"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Our Story
+                                  </li>
+                                </Link>
                               </SheetClose>
 
                               <Separator className="my-2" />
                               <SheetClose>
                                 {" "}
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Advantage InnoQuest
-                                </li>
+                                <Link href={"/about/#advantage-innoquest"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Advantage InnoQuest
+                                  </li>{" "}
+                                </Link>
                               </SheetClose>
 
                               <Separator className="my-2" />
                               <SheetClose>
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Industries
-                                </li>
+                                <Link href={"/about/#industries"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Industries
+                                  </li>{" "}
+                                </Link>
                               </SheetClose>
 
                               <Separator className="my-2" />
                               <SheetClose>
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Leadership Team
-                                </li>
+                                <Link href={"/about/#leadership"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Leadership Team
+                                  </li>{" "}
+                                </Link>
                               </SheetClose>
 
                               <Separator className="my-2" />
                               <SheetClose>
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Our Teams
-                                </li>
+                                <Link href={"/about/#team"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Our Teams
+                                  </li>{" "}
+                                </Link>
                               </SheetClose>
 
                               <Separator className="my-2" />
                               <SheetClose>
-                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                  Values
-                                </li>
+                                <Link href={"/about/#our-values"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Values
+                                  </li>{" "}
+                                </Link>
                               </SheetClose>
                             </ul>
                           </NavigationMenuContent>

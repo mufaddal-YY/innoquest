@@ -33,7 +33,7 @@ const myPortableTextComponents = {
 
 const Values = ({ aboutData }) => {
   return (
-    <main className="bg-primary flex items-center lg:h-screen">
+    <main className="bg-primary flex items-center lg:h-screen" id="our-values">
       <section className="container py-[100px] flex flex-col">
         {aboutData.map((item, index) => (
           <article

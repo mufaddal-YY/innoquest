@@ -33,7 +33,7 @@ const myPortableTextComponents = {
 
 const Advantage = ({ aboutData }) => {
   return (
-    <main className="bg-primary flex items-center lg:h-screen">
+    <main className="bg-primary flex items-center lg:h-screen" id="advantage-innoquest">
       <section className="container py-[100px] flex flex-col items-center">
         {aboutData.map((item, index) => (
           <article
