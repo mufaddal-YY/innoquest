@@ -123,5 +123,13 @@ export default {
         },
       ],
     },
+    {
+      name: "efficiencyImage",
+      title: "Efficiency Image",
+      type: "image",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+    },
   ],
 };

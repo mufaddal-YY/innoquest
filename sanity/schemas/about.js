@@ -50,6 +50,14 @@ export default {
       ],
     },
     {
+      name: "aboutImage",
+      title: "About Image",
+      type: "image",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+    },
+    {
       name: "advantageInno",
       title: "Advantage Innoquest",
       type: "array",
@@ -101,6 +109,28 @@ export default {
       ],
     },
     {
+      name: "clientele",
+      title: "Clientele",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "clientDesc",
+              title: "Client Description",
+              type: "array",
+              of: [
+                {
+                  type: "block",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
       name: "leadership",
       title: "Leadership",
       type: "array",
@@ -137,6 +167,24 @@ export default {
               type: "string",
             },
           ],
+        },
+      ],
+    },
+    {
+      name: "teamImage",
+      title: "Team Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "teamDescription",
+      title: "Team Description",
+      type: "array",
+      of: [
+        {
+          type: "block",
         },
       ],
     },

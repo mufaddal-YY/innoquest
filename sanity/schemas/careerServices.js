@@ -72,6 +72,14 @@ export default {
       ],
     },
     {
+      name: "compassImage",
+      title: "Compass Image",
+      type: "image",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+    },
+    {
       name: "portfolioCrafting",
       title: "Portfolio Crafting",
       type: "string",

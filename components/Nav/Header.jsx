@@ -15,7 +15,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-
   SheetTrigger,
 } from "@/components/ui/sheet";
 
@@ -38,18 +37,24 @@ const Header = () => {
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger>
-                        Employer Services
-                      </NavigationMenuTrigger>
+                      <Link href={"/employer-services"}>
+                        <NavigationMenuTrigger>
+                          Employer Services
+                        </NavigationMenuTrigger>
+                      </Link>
                       <NavigationMenuContent>
-                        <ul className="bg-[#222631] w-[350px] p-2 text-white border-[#222631]">
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Executive Search Solutions
-                          </li>
+                        < className="bg-[#222631] w-[350px] p-2 text-white border-[#222631]">
+                          <Link href={"/employer-services/#executive-search"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Executive Search Solutions
+                            </li>
+                          </Link>
                           <Separator className="my-2" />
+                          <Link href={"/employer-services/#professional-search"}>
                           <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                             Professional Search Solutions
-                          </li>
+                          </li></Link>
+                          
                           <Separator className="my-2" />
                           <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                             Niche Hiring
@@ -69,9 +74,11 @@ const Header = () => {
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger>
-                        Career Services
-                      </NavigationMenuTrigger>
+                      <Link href={"/career-services"}>
+                        <NavigationMenuTrigger>
+                          Career Services
+                        </NavigationMenuTrigger>
+                      </Link>
                       <NavigationMenuContent>
                         <ul className="bg-[#222631] w-[350px] px-2 py-2 text-white border-[#222631]">
                           <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
@@ -100,7 +107,9 @@ const Header = () => {
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                      <Link href={"/about"}>
+                        <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                      </Link>
                       <NavigationMenuContent>
                         <ul className="bg-[#222631] w-[350px] px-2 py-2 text-white border-[#222631]">
                           <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
@@ -133,11 +142,11 @@ const Header = () => {
                 </NavigationMenu>
               </li>
 
-              <li>
+              {/* <li>
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <Link href="/docs" legacyBehavior passHref>
+                      <Link href="/join-us" legacyBehavior passHref>
                         <NavigationMenuLink
                           className={navigationMenuTriggerStyle()}>
                           Join Us
@@ -146,16 +155,16 @@ const Header = () => {
                     </NavigationMenuItem>
                   </NavigationMenuList>
                 </NavigationMenu>
-              </li>
+              </li> */}
             </div>
           </div>
-          <div className="justify-end flex lg:hidden">
+          <div className="justify-end flex lg:hidden z-[1002]">
             <Sheet className="bg-[#222631]">
               <SheetTrigger asChild>
                 <AlignJustify className="text-white cursor-pointer" />
               </SheetTrigger>
               <SheetContent className="bg-[#222631]">
-                <div className="grid gap-4 py-4 list-none bg-[#222631]">
+                <div className="grid gap-4 py-4 list-none bg-[#222631] mt-14">
                   <div className="z-50">
                     <NavigationMenu>
                       <NavigationMenuList>
@@ -163,23 +172,36 @@ const Header = () => {
                           <NavigationMenuTrigger>
                             <span className="z-30">Employer Services</span>
                           </NavigationMenuTrigger>
+
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[350px] p-2 text-white border-[#222631] z-50">
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Executive Search Solutions
-                              </li>
+                              <SheetClose>
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Executive Search Solutions
+                                </li>
+                              </SheetClose>
                               <Separator className="my-2" />
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Professional Search Solutions
-                              </li>
+                              <SheetClose>
+                                {" "}
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Professional Search Solutions
+                                </li>
+                              </SheetClose>
+
                               <Separator className="my-2" />
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Niche Hiring
-                              </li>
+                              <SheetClose>
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Niche Hiring
+                                </li>
+                              </SheetClose>
+
                               <Separator className="my-2" />
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Recruitment Efficiency Solutions
-                              </li>
+                              <SheetClose>
+                                {" "}
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Recruitment Efficiency Solutions
+                                </li>
+                              </SheetClose>
                             </ul>
                           </NavigationMenuContent>
                         </NavigationMenuItem>
@@ -194,23 +216,34 @@ const Header = () => {
                           <NavigationMenuTrigger>
                             <span className="z-30">Career Services</span>
                           </NavigationMenuTrigger>
+
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[350px] p-2 text-white border-[#222631] z-50">
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Career Opportunities
-                              </li>
+                              <SheetClose>
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Career Opportunities
+                                </li>
+                              </SheetClose>
                               <Separator className="my-2" />
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Career Compass
-                              </li>
+                              <SheetClose>
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Career Compass
+                                </li>
+                              </SheetClose>
+
                               <Separator className="my-2" />
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Professional Portfolio Crafting
-                              </li>
+                              <SheetClose>
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Professional Portfolio Crafting
+                                </li>
+                              </SheetClose>
+
                               <Separator className="my-2" />
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Career Accelerator Program
-                              </li>
+                              <SheetClose>
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Career Accelerator Program
+                                </li>
+                              </SheetClose>
                             </ul>
                           </NavigationMenuContent>
                         </NavigationMenuItem>
@@ -223,31 +256,50 @@ const Header = () => {
                       <NavigationMenuList>
                         <NavigationMenuItem>
                           <NavigationMenuTrigger>About</NavigationMenuTrigger>
+
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[350px] p-2 text-white border-[#222631]">
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Our Story
-                              </li>
+                              <SheetClose>
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Our Story
+                                </li>
+                              </SheetClose>
+
                               <Separator className="my-2" />
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Advantage InnoQuest
-                              </li>
+                              <SheetClose>
+                                {" "}
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Advantage InnoQuest
+                                </li>
+                              </SheetClose>
+
                               <Separator className="my-2" />
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Industries
-                              </li>
+                              <SheetClose>
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Industries
+                                </li>
+                              </SheetClose>
+
                               <Separator className="my-2" />
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Leadership Team
-                              </li>
+                              <SheetClose>
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Leadership Team
+                                </li>
+                              </SheetClose>
+
                               <Separator className="my-2" />
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Our Teams
-                              </li>
+                              <SheetClose>
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Our Teams
+                                </li>
+                              </SheetClose>
+
                               <Separator className="my-2" />
-                              <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                Values
-                              </li>
+                              <SheetClose>
+                                <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                  Values
+                                </li>
+                              </SheetClose>
                             </ul>
                           </NavigationMenuContent>
                         </NavigationMenuItem>
@@ -255,15 +307,33 @@ const Header = () => {
                     </NavigationMenu>
                   </div>
 
+                  {/* <div className="z-20">
+                    <NavigationMenu>
+                      <NavigationMenuList>
+                        <NavigationMenuItem>
+                          <Link href="/join-us" legacyBehavior passHref>
+                            <SheetClose>
+                              <NavigationMenuLink
+                                className={navigationMenuTriggerStyle()}>
+                                Join Us
+                              </NavigationMenuLink>
+                            </SheetClose>
+                          </Link>
+                        </NavigationMenuItem>
+                      </NavigationMenuList>
+                    </NavigationMenu>
+                  </div> */}
                   <div className="z-20">
                     <NavigationMenu>
                       <NavigationMenuList>
                         <NavigationMenuItem>
-                          <Link href="/docs" legacyBehavior passHref>
-                            <NavigationMenuLink
-                              className={navigationMenuTriggerStyle()}>
-                              Join Us
-                            </NavigationMenuLink>
+                          <Link href="/contact" legacyBehavior passHref>
+                            <SheetClose>
+                              <NavigationMenuLink
+                                className={navigationMenuTriggerStyle()}>
+                                Contact
+                              </NavigationMenuLink>
+                            </SheetClose>
                           </Link>
                         </NavigationMenuItem>
                       </NavigationMenuList>
@@ -274,7 +344,7 @@ const Header = () => {
             </Sheet>
           </div>
           <div className="hidden lg:flex">
-            <Link href="/">
+            <Link href="/contact">
               <Button className="bg-[#E36C0A] rounded-full">Contact us</Button>
             </Link>
           </div>

@@ -42,11 +42,15 @@ export async function getAboutData() {
        subHeadline,
        "heroImage": heroImage.asset->url,
        ourStory,
+       "aboutImage": aboutImage.asset->url,
        advantageInno,
        "advantageImage": advantageImage.asset->url,
        industries[]{
         industryDesc,
         "image": image.asset->url,
+        },
+       clientele[]{
+        clientDesc,
         },
        leadership[]{
         name,
@@ -54,6 +58,8 @@ export async function getAboutData() {
         "image": image.asset->url,
         link,
         },
+        "teamImage": teamImage.asset->url,
+        teamDescription,
        ourValues[]{
         description,
         },
@@ -87,6 +93,7 @@ export async function getEmployerData() {
        "nicheImage": nicheImage.asset->url,
        recruitmentEfficiency,
        efficiencyDesc,
+       "efficiencyImage": efficiencyImage.asset->url,
       }`,
     {},
     defaultFetchOptions
@@ -96,7 +103,7 @@ export async function getEmployerData() {
 
 export async function getCareerData() {
   const result = await client.fetch(
-    groq`*[_type == "careerServices"]{
+    groq`*[_type == "career"]{
         _id,
         _createdAt,
        metaTitle,
@@ -110,6 +117,7 @@ export async function getCareerData() {
        link,
        careerCompass,
        compassDesc,
+       "compassImage": compassImage.asset->url,
        portfolioCrafting,
        portfolioDesc,
        "portfolioImage": portfolioImage.asset->url,

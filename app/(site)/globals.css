@@ -79,12 +79,18 @@
   @apply w-full mx-auto items-center;
 }
 
-
 .bg-primary {
   @apply bg-[#222631];
 }
 
 .floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.floating-hover:hover {
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
