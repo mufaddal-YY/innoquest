@@ -33,7 +33,7 @@ const myPortableTextComponents = {
 
 const PortfolioCrafting = ({ careerData }) => {
   return (
-    <main className="bg-primary flex items-center lg:h-screen" id="portfolio-crafting">
+    <main className="bg-primary flex items-center" id="portfolio-crafting">
       <section className="container py-[100px] flex flex-col items-center">
         {careerData.map((item, index) => (
           <article
@@ -65,7 +65,7 @@ const PortfolioCrafting = ({ careerData }) => {
             </div>
             <div className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center order-first">
               <Image
-                className="rounded-xl"
+                className="rounded-xl floating-hover"
                 src={item.portfolioImage}
                 width={500}
                 height={400}

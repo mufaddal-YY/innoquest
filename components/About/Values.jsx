@@ -33,7 +33,7 @@ const myPortableTextComponents = {
 
 const Values = ({ aboutData }) => {
   return (
-    <main className="bg-primary flex items-center lg:h-screen" id="our-values">
+    <main className="bg-primary flex items-center" id="our-values">
       <section className="container py-[100px] flex flex-col">
         {aboutData.map((item, index) => (
           <article
@@ -71,7 +71,7 @@ const Values = ({ aboutData }) => {
             </div>
             <div className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center">
               <Image
-                className="rounded-xl"
+                className="rounded-xl floating-hover"
                 src={item.valueImage}
                 width={600}
                 height={500}

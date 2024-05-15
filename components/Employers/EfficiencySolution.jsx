@@ -33,7 +33,7 @@ const myPortableTextComponents = {
 
 const EfficiencySolution = ({ employerData }) => {
   return (
-    <main className="bg-primary flex items-center lg:h-screen" id="recruitment-solutions">
+    <main className="bg-primary flex items-center" id="recruitment-solutions">
       <section className="container py-[100px] flex flex-col items-center">
         {employerData.map((item, index) => (
           <article
@@ -65,7 +65,7 @@ const EfficiencySolution = ({ employerData }) => {
             </div>
             <div className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center order-first">
               <Image
-                className="rounded-xl"
+                className="rounded-xl floating-hover"
                 src={item.efficiencyImage}
                 width={600}
                 height={500}

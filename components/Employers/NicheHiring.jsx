@@ -33,7 +33,7 @@ const myPortableTextComponents = {
 
 const NicheHiring = ({ employerData }) => {
   return (
-    <main className="bg-white flex items-center lg:h-screen" id="niche-hiring">
+    <main className="bg-white flex items-center" id="niche-hiring">
       <section className="container py-[50px] flex flex-col items-center">
         {employerData.map((item, index) => (
           <article
@@ -65,7 +65,7 @@ const NicheHiring = ({ employerData }) => {
             </div>
             <div className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center order-first lg:order-last">
               <Image
-                className="rounded-xl"
+                className="rounded-xl floating-hover"
                 src={item.nicheImage}
                 width={600}
                 height={500}

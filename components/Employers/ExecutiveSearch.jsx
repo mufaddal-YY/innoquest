@@ -33,7 +33,7 @@ const myPortableTextComponents = {
 
 const ExecutiveSearch = ({ employerData }) => {
   return (
-    <main className="bg-white flex items-center lg:h-screen" id="executive-search">
+    <main className="bg-white flex items-center" id="executive-search">
       <section className="container py-[50px] flex flex-col items-center">
         {employerData.map((item, index) => (
           <article
@@ -65,7 +65,7 @@ const ExecutiveSearch = ({ employerData }) => {
             </div>
             <div className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center order-first lg:order-last">
               <Image
-                className="rounded-xl"
+                className="rounded-xl floating-hover"
                 src={item.executiveImage}
                 width={800}
                 height={500}

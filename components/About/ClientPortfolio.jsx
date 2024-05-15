@@ -38,7 +38,7 @@ const ClientPortfolio = ({ aboutData }) => {
   return (
     <>
       <main className="bg-gray-100 items-center" id="industries">
-        <section className="container py-[50px] flex flex-col items-center">
+        <section className="container py-[100px] flex flex-col items-center">
           {aboutData.map((item, index) => (
             <article key={index} className="">
               <h4 className="mb-2 text-xl lg:text-3xl text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
@@ -81,7 +81,7 @@ const ClientPortfolio = ({ aboutData }) => {
                   </div>
                   <div className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center">
                     <Image
-                      className="rounded-xl mb-4"
+                      className="rounded-xl mb-4 floating-hover"
                       src={industry.image}
                       width={500}
                       height={500}

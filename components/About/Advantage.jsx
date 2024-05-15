@@ -33,7 +33,7 @@ const myPortableTextComponents = {
 
 const Advantage = ({ aboutData }) => {
   return (
-    <main className="bg-primary flex items-center lg:h-screen" id="advantage-innoquest">
+    <main className="bg-primary flex items-center" id="advantage-innoquest">
       <section className="container py-[100px] flex flex-col items-center">
         {aboutData.map((item, index) => (
           <article
@@ -67,7 +67,7 @@ const Advantage = ({ aboutData }) => {
             </div>
             <div className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center order-first">
               <Image
-                className="rounded-xl"
+                className="rounded-xl floating-hover"
                 src={item.advantageImage}
                 width={600}
                 height={500}
