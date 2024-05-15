@@ -1,9 +1,19 @@
-import ContactForm from "./Form";
+"use client";
+import React, { useState, useRef } from "react";
 
+import ContactForm from "./Form";
+import { motion as m, useInView } from "framer-motion";
 const CallToAction = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
   return (
     <main className="container py-[50px]">
-      <section className="flex items-center bg-primary rounded-[28px]">
+      <m.section
+        className="flex items-center bg-primary rounded-[28px]"
+        ref={sectionRef}
+        initial={{ y: 40, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{ ease: "easeInOut", duration: 0.75 }}>
         <article
           className="w-full lg:w-5/12 py-[250px] rounded-l-[28px] hidden lg:block bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('./contact.jpg')" }}
@@ -19,7 +29,7 @@ const CallToAction = () => {
             <ContactForm />
           </div>
         </article>
-      </section>
+      </m.section>
     </main>
   );
 };

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import { motion as m, useInView } from "framer-motion";
 import Image from "next/image";
 import { Separator } from "../ui/separator";
 import PortableText from "react-portable-text";
@@ -32,6 +34,8 @@ const myPortableTextComponents = {
 };
 
 const AboutUs = ({ aboutData }) => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false });
   return (
     <main className="bg-white flex items-center" id="our-story">
       <section className="container py-[100px] flex flex-col items-center">
@@ -39,7 +43,12 @@ const AboutUs = ({ aboutData }) => {
           <article
             key={index}
             className="flex flex-col lg:flex-row justify-between items-center w-full mb-10">
-            <div className="w-full lg:w-1/2">
+            <m.div
+              className="w-full lg:w-1/2"
+              ref={sectionRef}
+              initial={{ x: -20, opacity: 0 }}
+              animate={isInView ? { x: 0, opacity: 1 } : {}}
+              transition={{ ease: "easeInOut", duration: 0.75 }}>
               <h4 className="mb-2 text-xl lg:text-3xl text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
                 Our <span className="text-[#E36C0A]">Story</span>
               </h4>
@@ -70,8 +79,13 @@ const AboutUs = ({ aboutData }) => {
                   }}
                 />
               </div>
-            </div>
-            <div className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center order-first lg:order-last">
+            </m.div>
+            <m.div
+              className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center order-first lg:order-last"
+              ref={sectionRef}
+              initial={{ x: 20, opacity: 0 }}
+              animate={isInView ? { x: 0, opacity: 1 } : {}}
+              transition={{ ease: "easeInOut", duration: 0.75 }}>
               <Image
                 className="rounded-xl mb-4 floating-hover"
                 src={item.aboutImage}
@@ -80,7 +94,7 @@ const AboutUs = ({ aboutData }) => {
                 alt="About Image"
                 priority
               />
-            </div>
+            </m.div>
           </article>
         ))}
       </section>

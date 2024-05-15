@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import { motion as m, useInView } from "framer-motion";
 import Image from "next/image";
 import { Separator } from "../ui/separator";
 import PortableText from "react-portable-text";
@@ -32,6 +34,8 @@ const myPortableTextComponents = {
 };
 
 const Advantage = ({ aboutData }) => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false });
   return (
     <main className="bg-primary flex items-center" id="advantage-innoquest">
       <section className="container py-[100px] flex flex-col items-center">
@@ -39,7 +43,12 @@ const Advantage = ({ aboutData }) => {
           <article
             key={index}
             className="flex flex-col lg:flex-row justify-between items-center w-full mb-10">
-            <div className="w-full lg:w-1/2 p-4">
+            <m.div
+              className="w-full lg:w-1/2 p-4"
+              ref={sectionRef}
+              initial={{ x: -20, opacity: 0 }}
+              animate={isInView ? { x: 0, opacity: 1 } : {}}
+              transition={{ ease: "easeInOut", duration: 0.75 }}>
               <h4 className="mb-2 text-xl lg:text-3xl text-white font-semibold leading-snug lg:leading-snug tracking-wide">
                 Advantage <span className="text-[#E36C0A]">Innoquest</span>
               </h4>
@@ -64,8 +73,13 @@ const Advantage = ({ aboutData }) => {
                   }}
                 />
               </div>
-            </div>
-            <div className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center order-first">
+            </m.div>
+            <m.div
+              className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center order-first"
+              ref={sectionRef}
+              initial={{ x: 20, opacity: 0 }}
+              animate={isInView ? { x: 0, opacity: 1 } : {}}
+              transition={{ ease: "easeInOut", duration: 0.75 }}>
               <Image
                 className="rounded-xl floating-hover"
                 src={item.advantageImage}
@@ -74,7 +88,7 @@ const Advantage = ({ aboutData }) => {
                 alt="Advantage Innoquest"
                 priority
               />
-            </div>
+            </m.div>
           </article>
         ))}
       </section>

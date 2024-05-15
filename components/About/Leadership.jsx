@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import { motion as m, useInView } from "framer-motion";
 import { Separator } from "../ui/separator";
 import PortableText from "react-portable-text";
 import Image from "next/image";
@@ -43,60 +45,79 @@ const Leadership = ({ aboutData }) => {
               <span className="text-[#E36C0A]">Leadership</span>
             </h4>
             <Separator className="my-2" />
-            {item.leadership.map((data, index) => (
-              <div
-                key={index}
-                className={`flex flex-col lg:flex-row justify-between items-center w-full mb-10 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-                <div className="w-full lg:w-1/2">
-                  <h4 className="mb-2 text-xl py-2 border-b-2 text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
-                    <span className="text-[#222631]">{data.name}</span>
-                  </h4>
-                  <div className="py-4 text-gray-500">
-                    <PortableText
-                      content={data.description}
-                      components={myPortableTextComponents}
-                      serializers={{
-                        h1: (props) => (
-                          <h1 style={{ color: "red" }} {...props} />
-                        ),
-                        h4: (props) => (
-                          <h4 style={{ fontSize: "28px" }} {...props} />
-                        ),
-                        h5: (props) => (
-                          <h5 style={{ fontSize: "18px" }} {...props} />
-                        ),
-                        li: ({ children }) => (
-                          <li className="special-list-item list-disc leading-loose ">
-                            {children}
-                          </li>
-                        ),
-                        normal: ({ children }) => {
-                          if (children.length === 1 && children[0] === "") {
-                            return <br />;
-                          }
-                          return <p>{children}</p>;
-                        },
-                      }}
+            {item.leadership.map((data, index) => {
+              const descriptionRef = useRef(null);
+              const imageRef = useRef(null);
+              const isDescriptionInView = useInView(descriptionRef, {
+                once: false,
+              });
+              const isImageInView = useInView(imageRef, { once: false });
+
+              return (
+                <div
+                  key={index}
+                  className={`flex flex-col lg:flex-row justify-between items-center w-full mb-10 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
+                  <m.div
+                    className="w-full lg:w-1/2"
+                    ref={descriptionRef}
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={isDescriptionInView ? { x: 0, opacity: 1 } : {}}
+                    transition={{ ease: "easeInOut", duration: 0.75 }}>
+                    <h4 className="mb-2 text-xl py-2 border-b-2 text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
+                      <span className="text-[#222631]">{data.name}</span>
+                    </h4>
+                    <div className="py-4 text-gray-500">
+                      <PortableText
+                        content={data.description}
+                        components={myPortableTextComponents}
+                        serializers={{
+                          h1: (props) => (
+                            <h1 style={{ color: "red" }} {...props} />
+                          ),
+                          h4: (props) => (
+                            <h4 style={{ fontSize: "28px" }} {...props} />
+                          ),
+                          h5: (props) => (
+                            <h5 style={{ fontSize: "18px" }} {...props} />
+                          ),
+                          li: ({ children }) => (
+                            <li className="special-list-item list-disc leading-loose ">
+                              {children}
+                            </li>
+                          ),
+                          normal: ({ children }) => {
+                            if (children.length === 1 && children[0] === "") {
+                              return <br />;
+                            }
+                            return <p>{children}</p>;
+                          },
+                        }}
+                      />
+                    </div>
+                    <div className=" ">
+                      <Link href={data.link}>
+                        <FaLinkedinIn className="text-4xl text-white bg-[#0077b5] p-1 rounded-sm" />
+                      </Link>
+                    </div>
+                  </m.div>
+                  <m.div
+                    className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center"
+                    ref={imageRef}
+                    initial={{ x: 20, opacity: 0 }}
+                    animate={isImageInView ? { x: 0, opacity: 1 } : {}}
+                    transition={{ ease: "easeInOut", duration: 0.75 }}>
+                    <Image
+                      className="rounded-xl mb-4 floating-hover"
+                      src={data.image}
+                      width={500}
+                      height={500}
+                      alt="About Image"
+                      priority
                     />
-                  </div>
-                  <div className=" ">
-                    <Link href={data.link}>
-                      <FaLinkedinIn className="text-4xl text-white bg-[#0077b5] p-1 rounded-sm" />
-                    </Link>
-                  </div>
+                  </m.div>
                 </div>
-                <div className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center">
-                  <Image
-                    className="rounded-xl mb-4 floating-hover"
-                    src={data.image}
-                    width={500}
-                    height={500}
-                    alt="About Image"
-                    priority
-                  />
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </article>
         ))}
       </section>

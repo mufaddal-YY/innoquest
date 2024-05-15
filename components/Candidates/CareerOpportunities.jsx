@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useState, useRef } from "react";
+import { motion as m, useInView } from "framer-motion";
 import Image from "next/image";
 import { Separator } from "../ui/separator";
 import PortableText from "react-portable-text";
@@ -34,6 +36,8 @@ const myPortableTextComponents = {
 };
 
 const CareerOpportunities = ({ careerData }) => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false });
   return (
     <main className="bg-primary flex items-center" id="career-opportunities">
       <section className="container py-[100px] flex flex-col items-center">
@@ -41,7 +45,12 @@ const CareerOpportunities = ({ careerData }) => {
           <article
             key={index}
             className="flex flex-col lg:flex-row text-center mx-auto justify-between items-center w-full mb-10">
-            <div className="w-full p-4">
+            <m.div
+              className="w-full p-4"
+              ref={sectionRef}
+              initial={{ y: -20, opacity: 0 }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ ease: "easeInOut", duration: 0.75 }}>
               <h4 className="mb-2 text-xl lg:text-3xl text-white font-semibold leading-snug lg:leading-snug tracking-wide">
                 {item.careerOpp}
               </h4>
@@ -85,7 +94,7 @@ const CareerOpportunities = ({ careerData }) => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </m.div>
           </article>
         ))}
       </section>

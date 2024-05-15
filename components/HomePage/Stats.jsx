@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Network from "./../../public/prof.png";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import { motion as m, useInView } from "framer-motion";
 
 const Stats = ({ homeData }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,13 +13,19 @@ const Stats = ({ homeData }) => {
   const onVisibilityChange = (isVisible) => {
     setIsVisible(isVisible);
   };
-
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
   return (
     <main className="bg-white items-center py-[100px]">
       <section className="container">
         {homeData.map((item) => (
           <article className="flex flex-col gap-4 lg:flex-row">
-            <div className="w-full lg:w-4/12 items-center justify-center p-2">
+            <m.div
+              className="w-full lg:w-4/12 items-center justify-center p-2"
+              ref={sectionRef}
+              initial={{ x: -20, opacity: 0 }}
+              animate={isInView ? { x: 0, opacity: 1 } : {}}
+              transition={{ ease: "easeInOut", duration: 0.75 }}>
               <VisibilitySensor partialVisibility={true} delayedCall={true}>
                 {({ isVisible }) => (
                   <div className="border border-red-400 rounded-xl bg-white p-8">
@@ -40,9 +47,14 @@ const Stats = ({ homeData }) => {
                   </div>
                 )}
               </VisibilitySensor>
-            </div>
+            </m.div>
             <div className="w-full lg:w-8/12 items-center">
-              <div className="flex flex-wrap">
+              <m.div
+                className="flex flex-wrap"
+                ref={sectionRef}
+                initial={{ x: 20, opacity: 0 }}
+                animate={isInView ? { x: 0, opacity: 1 } : {}}
+                transition={{ ease: "easeInOut", duration: 0.75 }}>
                 <div className="p-2 w-full md:w-1/2 lg:w-1/2">
                   <VisibilitySensor partialVisibility={true} delayedCall={true}>
                     {({ isVisible }) => (
@@ -128,7 +140,7 @@ const Stats = ({ homeData }) => {
                     )}
                   </VisibilitySensor>
                 </div>
-              </div>
+              </m.div>
             </div>
           </article>
         ))}

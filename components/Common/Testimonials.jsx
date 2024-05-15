@@ -7,6 +7,7 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiMiniArrowLongLeft } from "react-icons/hi2";
 import { FaStar } from "react-icons/fa";
 import { Separator } from "../ui/separator";
+import { motion as m, useInView } from "framer-motion";
 
 const Testimonials = ({ testimonialsData }) => {
   const settings = {
@@ -45,7 +46,8 @@ const Testimonials = ({ testimonialsData }) => {
       },
     ],
   };
-
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false });
   const sliderRef = useRef(null);
   return (
     <main className="bg-white items-center py-[100px]">
@@ -70,12 +72,19 @@ const Testimonials = ({ testimonialsData }) => {
             </div>
           </div>
         </article>
-        
       </section>
       <Separator className="my-2" />
 
-      <section className="container mt-8 items-center">
-        <Slider ref={sliderRef} {...settings} className="flex justify-between items-center">
+      <m.section
+        className="container mt-8 items-center"
+        ref={sectionRef}
+        initial={{ y: 20, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{ ease: "easeInOut", duration: 0.75 }}>
+        <Slider
+          ref={sliderRef}
+          {...settings}
+          className="flex justify-between items-center">
           {testimonialsData.map((item, index) => (
             <div className="p-2" key={index}>
               <div
@@ -103,7 +112,7 @@ const Testimonials = ({ testimonialsData }) => {
             </div>
           ))}
         </Slider>
-      </section>
+      </m.section>
     </main>
   );
 };
