@@ -43,18 +43,20 @@ const Header = () => {
                         </NavigationMenuTrigger>
                       </Link>
                       <NavigationMenuContent>
-                        < className="bg-[#222631] w-[350px] p-2 text-white border-[#222631]">
+                        <ul className="bg-[#222631] w-[350px] p-2 text-white border-[#222631]">
                           <Link href={"/employer-services/#executive-search"}>
                             <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                               Executive Search Solutions
                             </li>
                           </Link>
                           <Separator className="my-2" />
-                          <Link href={"/employer-services/#professional-search"}>
-                          <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                            Professional Search Solutions
-                          </li></Link>
-                          
+                          <Link
+                            href={"/employer-services/#professional-search"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Professional Search Solutions
+                            </li>
+                          </Link>
+
                           <Separator className="my-2" />
                           <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                             Niche Hiring
