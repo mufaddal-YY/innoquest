@@ -314,59 +314,59 @@ const Header = () => {
 
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[350px] p-2 text-white border-[#222631]">
-                              <SheetClose>
-                                <Link href={"/about/#our-story"}>
+                              <Link href={"/about/#our-story"}>
+                                <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     Our Story
                                   </li>
-                                </Link>
-                              </SheetClose>
+                                </SheetClose>
+                              </Link>
 
                               <Separator className="my-2" />
-                              <SheetClose>
-                                {" "}
-                                <Link href={"/about/#advantage-innoquest"}>
+                              <Link href={"/about/#advantage-innoquest"}>
+                                <SheetClose>
+                                  {" "}
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     Advantage InnoQuest
                                   </li>{" "}
-                                </Link>
-                              </SheetClose>
+                                </SheetClose>
+                              </Link>
 
                               <Separator className="my-2" />
-                              <SheetClose>
-                                <Link href={"/about/#industries"}>
+                              <Link href={"/about/#industries"}>
+                                <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     Industries
                                   </li>{" "}
-                                </Link>
-                              </SheetClose>
+                                </SheetClose>
+                              </Link>
 
                               <Separator className="my-2" />
-                              <SheetClose>
-                                <Link href={"/about/#leadership"}>
+                              <Link href={"/about/#leadership"}>
+                                <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     Leadership Team
                                   </li>{" "}
-                                </Link>
-                              </SheetClose>
+                                </SheetClose>{" "}
+                              </Link>
 
                               <Separator className="my-2" />
-                              <SheetClose>
-                                <Link href={"/about/#team"}>
+                              <Link href={"/about/#team"}>
+                                <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     Our Teams
                                   </li>{" "}
-                                </Link>
-                              </SheetClose>
+                                </SheetClose>{" "}
+                              </Link>
 
                               <Separator className="my-2" />
-                              <SheetClose>
-                                <Link href={"/about/#our-values"}>
+                              <Link href={"/about/#our-values"}>
+                                <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     Values
                                   </li>{" "}
-                                </Link>
-                              </SheetClose>
+                                </SheetClose>{" "}
+                              </Link>
                             </ul>
                           </NavigationMenuContent>
                         </NavigationMenuItem>

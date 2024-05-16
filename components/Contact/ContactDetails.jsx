@@ -38,7 +38,8 @@ const ContactDetails = () => {
         </div>
         <article className="flex flex-row gap-4 items-center">
           <div className="text-center space-y-4">
-            <Link href={"https://www.linkedin.com/company/innoquest-consulting"}>
+            <Link
+              href={"https://www.linkedin.com/company/innoquest-consulting"}>
               <div className="flex items-center justify-center hover:text-white text-[#E36C0A] border border-[#E36C0A] rounded-full p-4 bg-white hover:bg-primary w-20 h-20 mx-auto">
                 <FaLinkedin className="h-8 w-8" />
               </div>
