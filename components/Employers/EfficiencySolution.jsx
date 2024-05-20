@@ -75,6 +75,9 @@ const EfficiencySolution = ({ employerData }) => {
                     }
                     return <p>{children}</p>;
                   },
+                  strong: ({ children }) => (
+                    <strong style={{ color: "#E36C0A" }}>{children}</strong>
+                  ),
                 }}
               />
               <Separator className="my-2" />
@@ -105,6 +108,9 @@ const EfficiencySolution = ({ employerData }) => {
                       }
                       return <p>{children}</p>;
                     },
+                    strong: ({ children }) => (
+                      <strong style={{ color: "#E36C0A" }}>{children}</strong>
+                    ),
                   }}
                 />
               </div>
