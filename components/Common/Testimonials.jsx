@@ -102,10 +102,10 @@ const Testimonials = ({ testimonialsData }) => {
                   <FaStar />
                   <FaStar />
                 </div>
-                <div className="text-sm lg:text-[14px] leading-snug font-light py-4">
+                <div className="text-sm lg:text-[12px] leading-normal font-light py-4">
                   <span>{item.description}</span>
                 </div>
-                <div className="text-sm lg:text-md font-medium py-4">
+                <div className="text-sm font-medium py-4">
                   <span>{item.designation}</span>
                 </div>
               </div>

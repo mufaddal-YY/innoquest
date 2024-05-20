@@ -9,7 +9,7 @@ const HeroBanner = ({ homeData }) => {
   const isInView = useInView(sectionRef, { once: false });
   return (
     <main
-      className="bg-primary lg:h-screen items-center"
+      className="bg-primary items-center"
       style={{
         backgroundImage: "url('./heroBg.png')",
         backgroundPosition: "center",
@@ -31,10 +31,9 @@ const HeroBanner = ({ homeData }) => {
 
               <p className="text-white mb-8 text-md">~ Walt Disney</p>
 
-              <p className="text-gray-300 text-sm lg:text-lg">
-                {item.subHeadline}
-              </p>
+              <p className="text-gray-300 text-md">{item.subHeadline}</p>
             </m.div>
+
             <m.div
               initial={{ x: 40, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}

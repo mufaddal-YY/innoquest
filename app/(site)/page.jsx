@@ -9,7 +9,7 @@ export default async function Home() {
   const homeData = await getHomeData();
   const testimonialsData = await getClientTestimonialsData();
   return (
-    <main className="mt-10">
+    <main className="mt-4">
       <HeroBanner homeData={homeData} />
       <Testimonials testimonialsData={testimonialsData} />
       <Services homeData={homeData} />

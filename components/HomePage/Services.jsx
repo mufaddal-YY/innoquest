@@ -19,23 +19,21 @@ const Services = () => {
                 ease: "easeIn",
                 duration: 1.2,
               }}
-              className="absolute inset-0 lg:px-6 sm:px-2 max-w-7xl mx-auto flex items-center justify-center p-2 py-[100px] z-20 overflow-hidden"
-            >
+              className="absolute inset-0 lg:px-6 sm:px-2 max-w-7xl mx-auto flex items-center justify-center p-2 py-[100px] z-20 overflow-hidden">
               <div className="text-center">
                 <h4 className="lg:text-5xl md:text-3xl text-[28px] text-white leading-normal md:leading-snug lg:leading-snug font-medium mb-4">
                   Employer Services
                 </h4>
                 <p className="lg:w-3/4 w-full mx-auto text-white leading-tight font-regular mb-8">
-                  Your Vision, Our Mission: Partners in Hiring Success
+                  Considering recruiting top talent for your Organization?
                 </p>
-                <Link href={"/employers"}>
+                <Link href={"/employer-services"}>
                   <button className="rounded-full px-4 py-3 text-white text-md font-regular  bg-[#E36C0A] hover:bg-transparent border border-[#E36C0A] hover:text-white hover:border hover:border-[#E36C0A]">
-                    Explore Service
+                    Explore Our Services
                   </button>
                 </Link>
               </div>
             </motion.div>
-            
             <div className="w-full h-full absolute inset-0 overflow-hidden">
               <Image
                 className="object-cover"
@@ -55,23 +53,21 @@ const Services = () => {
                 ease: "easeIn",
                 duration: 1.2,
               }}
-              className="absolute inset-0 lg:px-6 sm:px-2 max-w-7xl mx-auto flex items-center justify-center p-2 py-[100px] z-20 overflow-hidden"
-            >
+              className="absolute inset-0 lg:px-6 sm:px-2 max-w-7xl mx-auto flex items-center justify-center p-2 py-[100px] z-20 overflow-hidden">
               <div className="text-center">
                 <h4 className="lg:text-5xl md:text-3xl text-[28px] text-white leading-normal md:leading-snug lg:leading-snug font-semibold mb-4">
                   Career Services
                 </h4>
                 <p className="lg:w-3/4 w-full mx-auto text-white leading-tight font-regular mb-8">
-                  Crafting careers. Creating success stories.
+                  Enthusiastic about advancing your
                 </p>
-                <Link href={"/careers"}>
+                <Link href={"/career-services"}>
                   <button className="rounded-full px-4 py-3 text-white text-md font-regular bg-[#E36C0A] hover:bg-transparent border border-[#E36C0A] hover:text-white hover:border hover:border-[#E36C0A]">
-                    Explore Service
+                    Explore Our Services
                   </button>
                 </Link>
               </div>
             </motion.div>
-            
             <div className="w-full h-full absolute inset-0 overflow-hidden">
               <Image
                 className="object-cover"

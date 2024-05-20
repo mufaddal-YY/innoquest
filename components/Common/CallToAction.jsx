@@ -7,7 +7,7 @@ const CallToAction = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
   return (
-    <main className="container py-[50px]">
+    <main className="container py-[50px] w-full lg:w-10/12">
       <m.section
         className="flex items-center bg-primary rounded-[28px]"
         ref={sectionRef}

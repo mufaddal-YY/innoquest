@@ -159,7 +159,7 @@ const Header = () => {
                           <Separator className="my-2" />
                           <Link href={"/about/#our-values"}>
                             <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                              Values
+                              Our Values
                             </li>{" "}
                           </Link>
                         </ul>
@@ -363,7 +363,7 @@ const Header = () => {
                               <Link href={"/about/#our-values"}>
                                 <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                    Values
+                                   Our Values
                                   </li>{" "}
                                 </SheetClose>{" "}
                               </Link>
