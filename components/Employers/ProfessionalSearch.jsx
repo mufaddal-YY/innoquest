@@ -49,9 +49,34 @@ const ProfessionalSearch = ({ employerData }) => {
               initial={{ x: 20, opacity: 0 }}
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ ease: "easeInOut", duration: 0.75 }}>
-              <h4 className="mb-2 text-xl lg:text-3xl text-white font-semibold leading-snug lg:leading-snug tracking-wide">
-                {item.professionalSearch}
-              </h4>
+              <PortableText
+                content={item.professionalSearch}
+                components={myPortableTextComponents}
+                serializers={{
+                  h1: (props) => <h1 style={{ color: "red" }} {...props} />,
+                  h4: (props) => (
+                    <h1
+                      className="text-xl lg:text-3xl text-white font-semibold leading-snug lg:leading-snug tracking-wide"
+                      {...props}
+                    />
+                  ),
+                  h6: (props) => (
+                    <h1
+                      className="text-lg lg:text-xl text-white font-medium leading-snug lg:leading-snug tracking-wide"
+                      {...props}
+                    />
+                  ),
+                  li: ({ children }) => (
+                    <li className="special-list-item">{children}</li>
+                  ),
+                  normal: ({ children }) => {
+                    if (children.length === 1 && children[0] === "") {
+                      return <br />;
+                    }
+                    return <p>{children}</p>;
+                  },
+                }}
+              />
               <Separator className="my-2" />
               <div className="py-4 text-gray-200">
                 <PortableText

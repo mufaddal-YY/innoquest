@@ -39,8 +39,14 @@ export default {
     {
       name: "executiveSearch",
       title: "Executive Search",
-      type: "string",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
     },
+    
     {
       name: "executiveDesc",
       title: "Executive Search Description",
@@ -63,7 +69,12 @@ export default {
     {
       name: "professionalSearch",
       title: "Professional Search",
-      type: "string",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
     },
     {
       name: "professionalDesc",
@@ -87,7 +98,12 @@ export default {
     {
       name: "nicheHiring",
       title: "Niche Hiring",
-      type: "string",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
     },
     {
       name: "nicheDesc",
@@ -111,7 +127,12 @@ export default {
     {
       name: "recruitmentEfficiency",
       title: "Recruitment Efficiency",
-      type: "string",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
     },
     {
       name: "efficiencyDesc",

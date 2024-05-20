@@ -63,6 +63,23 @@ const Values = ({ aboutData }) => {
                   <PortableText
                     content={data.description}
                     components={myPortableTextComponents}
+                    serializers={{
+                      h1: (props) => <h1 style={{ color: "red" }} {...props} />,
+                      li: ({ children }) => (
+                        <li className="special-list-item list-disc leading-normal mb-2">
+                          {children}
+                        </li>
+                      ),
+                      normal: ({ children }) => {
+                        if (children.length === 1 && children[0] === "") {
+                          return <br />;
+                        }
+                        return <p>{children}</p>;
+                      },
+                      strong: ({ children }) => (
+                        <strong style={{ color: "#E36C0A" }}>{children}</strong>
+                      ),
+                    }}
                   />
                 </div>
               ))}
