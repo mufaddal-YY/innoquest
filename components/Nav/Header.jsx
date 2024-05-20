@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import { useState } from "react";
+
 import { Logo } from "@/lib/Icons";
 import Link from "next/link";
 import {
@@ -12,6 +14,12 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+
+import {
   Sheet,
   SheetClose,
   SheetContent,
@@ -20,9 +28,18 @@ import {
 
 import { Separator } from "@/components/ui/separator";
 import { Button } from "../ui/button";
-import { AlignJustify } from "lucide-react";
+import { AlignJustify, ChevronDown } from "lucide-react";
 
 const Header = () => {
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsPopoverOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsPopoverOpen(false);
+  };
   return (
     <main className="bg-primary fixed w-full top-0 z-[1000]">
       <nav className="container py-3 ">
@@ -81,36 +98,59 @@ const Header = () => {
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <Link href={"/career-services"}>
-                        <NavigationMenuTrigger>
-                          Career Services
-                        </NavigationMenuTrigger>
-                      </Link>
+                      <NavigationMenuTrigger>
+                        Career Services
+                      </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="bg-[#222631] w-[350px] px-2 py-2 text-white border-[#222631]">
-                          <Link href={"/career-services/#career-opportunities"}>
+                          <Link href="/career-services/#career-opportunities">
                             <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                               Career Opportunities
                             </li>
                           </Link>
                           <Separator className="my-2" />
-                          <Link href={"/career-services/#career-compass"}>
-                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                              Career Compass
-                            </li>
-                          </Link>
-                          <Separator className="my-2" />
-                          <Link href={"/career-services/#portfolio-crafting"}>
-                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                              Professional Portfolio Crafting
-                            </li>
-                          </Link>
-                          <Separator className="my-2" />
-                          <Link href={"/career-services/#career-accelerator"}>
-                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                              Career Accelerator Program
-                            </li>
-                          </Link>
+                          <Popover open={isPopoverOpen}>
+                            <PopoverTrigger asChild>
+                              <li
+                                className="bg-[#222631]  p-2 rounded-sm hover:bg-[#282c38] cursor-pointer"
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}>
+                                <Link
+                                  className="flex items-center"
+                                  href="/career-services/#career-enhancement">
+                                  Career Enhancement
+                                  <ChevronDown
+                                    className="relative top-[1px] ml-1 h-3 w-3 transition duration-200"
+                                    aria-hidden="true"
+                                  />
+                                </Link>
+                              </li>
+                            </PopoverTrigger>
+                            <PopoverContent
+                              className="bg-[#222631] w-[350px] mt-1 px-2 py-2 text-white rounded-lg border border-[#E36C0A]"
+                              onMouseEnter={handleMouseEnter}
+                              onMouseLeave={handleMouseLeave}>
+                              <ul>
+                                <Link href="/career-services/#career-compass">
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Career Compass
+                                  </li>
+                                </Link>
+                                <Separator className="my-2" />
+                                <Link href="/career-services/#portfolio-crafting">
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Professional Portfolio Crafting
+                                  </li>
+                                </Link>
+                                <Separator className="my-2" />
+                                <Link href="/career-services/#career-accelerator">
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Career Accelerator Program
+                                  </li>
+                                </Link>
+                              </ul>
+                            </PopoverContent>
+                          </Popover>
                         </ul>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
@@ -272,33 +312,65 @@ const Header = () => {
                                 </Link>
                               </SheetClose>
                               <Separator className="my-2" />
-                              <SheetClose>
-                                <Link href={"/career-services/#career-compass"}>
-                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                    Career Compass
+                              <Popover open={isPopoverOpen}>
+                                <PopoverTrigger asChild>
+                                  <li
+                                    className="bg-[#222631]  p-2 rounded-sm hover:bg-[#282c38] cursor-pointer"
+                                    onMouseEnter={handleMouseEnter}
+                                    onMouseLeave={handleMouseLeave}>
+                                    <Link
+                                      className="flex items-center"
+                                      href="/career-services/#career-enhancement">
+                                      Career Enhancement
+                                      <ChevronDown
+                                        className="relative top-[1px] ml-1 h-3 w-3 transition duration-200"
+                                        aria-hidden="true"
+                                      />
+                                    </Link>
                                   </li>
-                                </Link>
-                              </SheetClose>
+                                </PopoverTrigger>
+                                <PopoverContent
+                                  className="bg-[#222631] w-[280px] mt-1 px-2 py-2 text-white rounded-lg border border-[#E36C0A]"
+                                  onMouseEnter={handleMouseEnter}
+                                  onMouseLeave={handleMouseLeave}>
+                                  <ul>
+                                    <SheetClose>
+                                      <Link
+                                        href={
+                                          "/career-services/#career-compass"
+                                        }>
+                                        <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                          Career Compass
+                                        </li>
+                                      </Link>
+                                    </SheetClose>
 
-                              <Separator className="my-2" />
-                              <SheetClose>
-                                <Link
-                                  href={"/career-services/#portfolio-crafting"}>
-                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                    Professional Portfolio Crafting
-                                  </li>
-                                </Link>
-                              </SheetClose>
+                                    <Separator className="my-2" />
+                                    <SheetClose>
+                                      <Link
+                                        href={
+                                          "/career-services/#portfolio-crafting"
+                                        }>
+                                        <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                          Professional Portfolio Crafting
+                                        </li>
+                                      </Link>
+                                    </SheetClose>
 
-                              <Separator className="my-2" />
-                              <SheetClose>
-                                <Link
-                                  href={"/career-services/#career-accelerator"}>
-                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                    Career Accelerator Program
-                                  </li>
-                                </Link>
-                              </SheetClose>
+                                    <Separator className="my-2" />
+                                    <SheetClose>
+                                      <Link
+                                        href={
+                                          "/career-services/#career-accelerator"
+                                        }>
+                                        <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                          Career Accelerator Program
+                                        </li>
+                                      </Link>
+                                    </SheetClose>
+                                  </ul>
+                                </PopoverContent>
+                              </Popover>
                             </ul>
                           </NavigationMenuContent>
                         </NavigationMenuItem>
@@ -363,7 +435,7 @@ const Header = () => {
                               <Link href={"/about/#our-values"}>
                                 <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                   Our Values
+                                    Our Values
                                   </li>{" "}
                                 </SheetClose>{" "}
                               </Link>

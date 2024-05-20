@@ -32,6 +32,9 @@ const myPortableTextComponents = {
         </a>
       );
     },
+    strong: ({ children }) => (
+      <strong style={{ color: '#E36C0A' }}>{children}</strong>
+    ),
   },
 };
 
@@ -42,7 +45,7 @@ const Leadership = ({ aboutData }) => {
         {aboutData.map((item, index) => (
           <article key={index} className="">
             <h4 className="mb-2 text-2xl lg:text-3xl text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
-              <span className="text-[#E36C0A]">Leadership</span>
+              <span className="text-[#E36C0A]">Leadership </span> Team
             </h4>
             <Separator className="my-2" />
             {item.leadership.map((data, index) => {

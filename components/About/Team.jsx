@@ -33,7 +33,7 @@ const myPortableTextComponents = {
 
 const Team = ({ aboutData }) => {
   return (
-    <main className="bg-white flex items-center" id="team">
+    <main className="bg-gray-50 flex items-center" id="team">
       <section className="container py-[50px] flex flex-col items-center">
         {aboutData.map((item, index) => (
           <article key={index} className="">
@@ -41,7 +41,7 @@ const Team = ({ aboutData }) => {
               className={`flex flex-col lg:flex-row justify-between items-center w-full mb-10 }`}>
               <div className="w-full">
                 <h4 className="mb-2 text-2xl lg:text-3xl text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
-                  Our <span className="text-[#E36C0A]">Teams</span>
+                  Our <span className="text-[#E36C0A]">Team</span>
                 </h4>
 
                 <div className="py-4 text-gray-500">
