@@ -98,7 +98,7 @@ const Leadership = ({ aboutData }) => {
                       />
                     </div>
                     <div className=" ">
-                      <Link href={data.link}>
+                      <Link href={data.link} target="_blank" rel="noopener noreferrer">
                         <FaLinkedinIn className="text-4xl text-white bg-[#0077b5] p-1 rounded-sm" />
                       </Link>
                     </div>
