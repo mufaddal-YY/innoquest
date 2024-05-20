@@ -16,17 +16,17 @@ const Footer = async () => {
         <article>
           {contactData.map((item) => (
             <div className="flex gap-4 items-center">
-              <Link href={item.linkedin}>
+              <Link href={item.linkedin} target="_blank" rel="noopener noreferrer">
                 <span className="text-2xl text-white">
                   <FaLinkedin />
                 </span>
               </Link>
-              <Link href={item.facebook}>
+              <Link href={item.facebook} target="_blank" rel="noopener noreferrer">
                 <span className="text-2xl text-white">
                   <FaFacebook />
                 </span>
               </Link>
-              <Link href={item.blogSpot}>
+              <Link href={item.blogSpot} target="_blank" rel="noopener noreferrer">
                 <span className="text-2xl text-white">
                   <FaBlogger />
                 </span>

@@ -209,6 +209,68 @@ const Header = () => {
                 </NavigationMenu>
               </li>
 
+              <li>
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <Link href={"/"}>
+                        <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+                      </Link>
+                      <NavigationMenuContent>
+                        <ul className="bg-[#222631] w-[350px] px-2 py-2 text-white border-[#222631]">
+                          <Link href={"/"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              IQ on Social Media
+                            </li>
+                          </Link>
+                          <Separator className="my-2" />
+                          <Link href={"/"}>
+                            <li className="bg-[#A222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              IQ Insights
+                            </li>
+                          </Link>
+                          <Separator className="my-2" />
+                          <Link href={"/"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Newsroom
+                            </li>{" "}
+                          </Link>
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+              </li>
+
+              <li>
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <Link href={"/"}>
+                        <NavigationMenuTrigger>
+                          Work With Us
+                        </NavigationMenuTrigger>
+                      </Link>
+                      <NavigationMenuContent>
+                        <ul className="bg-[#222631] w-[350px] px-2 py-2 text-white border-[#222631]">
+                          <Link href={"/"}>
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Opportunities with IQ
+                            </li>
+                          </Link>
+                          <Separator className="my-2" />
+                          <Link href={"/contact"}>
+                            <li className="bg-[#A222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                              Contact Us
+                            </li>
+                          </Link>
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+              </li>
+
               {/* <li>
                 <NavigationMenu>
                   <NavigationMenuList>
@@ -446,23 +508,81 @@ const Header = () => {
                     </NavigationMenu>
                   </div>
 
-                  {/* <div className="z-20">
+                  <div className="z-20">
                     <NavigationMenu>
                       <NavigationMenuList>
                         <NavigationMenuItem>
-                          <Link href="/join-us" legacyBehavior passHref>
-                            <SheetClose>
-                              <NavigationMenuLink
-                                className={navigationMenuTriggerStyle()}>
-                                Join Us
-                              </NavigationMenuLink>
-                            </SheetClose>
+                          <Link href={"/"}>
+                            <NavigationMenuTrigger>
+                              Resources
+                            </NavigationMenuTrigger>
                           </Link>
+                          <NavigationMenuContent>
+                            <ul className="bg-[#222631] w-[350px] px-2 py-2 text-white border-[#222631]">
+                              <SheetClose>
+                                <Link href={"/"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    IQ on Social Media
+                                  </li>
+                                </Link>
+                              </SheetClose>
+                              <Separator className="my-2" />
+                              <SheetClose>
+                                <Link href={"/"}>
+                                  <li className="bg-[#A222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    IQ Insights
+                                  </li>
+                                </Link>
+                              </SheetClose>
+                              <Separator className="my-2" />
+                              <SheetClose>
+                                <Link href={"/"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Newsroom
+                                  </li>{" "}
+                                </Link>
+                              </SheetClose>
+                            </ul>
+                          </NavigationMenuContent>
                         </NavigationMenuItem>
                       </NavigationMenuList>
                     </NavigationMenu>
-                  </div> */}
-                  <div className="z-20">
+                  </div>
+
+                  <div className="z-10">
+                    <NavigationMenu>
+                      <NavigationMenuList>
+                        <NavigationMenuItem>
+                          <Link href={"/"}>
+                            <NavigationMenuTrigger>
+                              Work With Us
+                            </NavigationMenuTrigger>
+                          </Link>
+                          <NavigationMenuContent>
+                            <ul className="bg-[#222631] w-[350px] px-2 py-2 text-white border-[#222631]">
+                              <SheetClose>
+                                <Link href={"/"}>
+                                  <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Opportunities with IQ
+                                  </li>
+                                </Link>
+                              </SheetClose>
+                              <Separator className="my-2" />
+                              <SheetClose>
+                                <Link href={"/"}>
+                                  <li className="bg-[#A222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                                    Contact Us
+                                  </li>
+                                </Link>
+                              </SheetClose>
+                            </ul>
+                          </NavigationMenuContent>
+                        </NavigationMenuItem>
+                      </NavigationMenuList>
+                    </NavigationMenu>
+                  </div>
+
+                  <div className="z-6">
                     <NavigationMenu>
                       <NavigationMenuList>
                         <NavigationMenuItem>

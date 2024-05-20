@@ -17,7 +17,7 @@ const HeroBanner = ({ homeData }) => {
         backgroundRepeat: "no-repeat",
       }}>
       {homeData.map((item) => (
-        <section className="container py-[50px] items-center">
+        <section className="container py-[100px] items-center">
           <article className="flex flex-col lg:flex-row justify-between items-center">
             <m.div
               className="w-full lg:w-7/12"
