@@ -38,7 +38,7 @@ const AboutUs = ({ aboutData }) => {
   const isInView = useInView(sectionRef, { once: false });
   return (
     <main className="bg-white flex items-center" id="our-story">
-      <section className="container py-[100px] flex flex-col items-center">
+      <section className="container py-[50px] flex flex-col items-center">
         {aboutData.map((item, index) => (
           <article
             key={index}

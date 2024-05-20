@@ -9,17 +9,17 @@ const PageBanner = ({ headline, subHeadline, image }) => {
   return (
     <main className="bg-gray-50 items-center bg-cover bg-center bg-no-repeat">
       <section className="flex items-center">
-        <article className="flex flex-col lg:flex-row justify-between items-center w-full">
+        <article className="flex flex-col lg:flex-row  bg-[#ffecdc] justify-between items-center w-full">
           <m.div
-            className="w-full lg:w-6/12 flex flex-col items-center justify-center"
+            className="w-full h-[250px] lg:w-6/12 flex flex-col items-center text-center justify-center"
             ref={sectionRef}
             initial={{ x: -20, opacity: 0 }}
             animate={isInView ? { x: 0, opacity: 1 } : {}}
             transition={{ ease: "easeInOut", duration: 0.75 }}>
-            <h4 className="mb-2 text-2xl lg:text-5xl text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
-              {headline}
+            <h4 className="mb-2 text-3xl w-full p-4 lg:w-2/3 text-left lg:text-5xl text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
+              {subHeadline}
             </h4>
-            <p className="text-gray-600 text-sm lg:text-lg">{subHeadline}</p>
+            {/* <p className="text-gray-600 text-sm lg:text-lg">{subHeadline}</p> */}
           </m.div>
           <m.div
             className="w-full h-[550px] lg:w-6/12 p-2 flex justify-center items-center order-first lg:order-last bg-no-repeat bg-center bg-cover"
@@ -27,18 +27,7 @@ const PageBanner = ({ headline, subHeadline, image }) => {
             initial={{ x: 20, opacity: 0 }}
             animate={isInView ? { x: 0, opacity: 1 } : {}}
             transition={{ ease: "easeInOut", duration: 0.75 }}
-            style={{ backgroundImage: `url(${image})` }}>
-            {/* 
-  <Image
-    className="rounded-xl"
-    src={image}
-    width={800}
-    height={500}
-    alt="Banner image"
-    priority // Helps to preload the image for faster loading
-  /> 
-  */}
-          </m.div>
+            style={{ backgroundImage: `url(${image})` }}></m.div>
         </article>
       </section>
     </main>

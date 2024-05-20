@@ -17,7 +17,7 @@ const HeroBanner = ({ homeData }) => {
         backgroundRepeat: "no-repeat",
       }}>
       {homeData.map((item) => (
-        <section className="container py-[100px] items-center">
+        <section className="container py-[50px] items-center">
           <article className="flex flex-col lg:flex-row justify-between items-center">
             <m.div
               className="w-full lg:w-7/12"
@@ -25,7 +25,7 @@ const HeroBanner = ({ homeData }) => {
               initial={{ x: -40, opacity: 0 }}
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ ease: "easeInOut", duration: 0.75 }}>
-              <h4 className="mb-2">
+              <h4 className="mb-2 text-yellow-300">
                 <TextGenerateEffect words={item.headline} />
               </h4>
 

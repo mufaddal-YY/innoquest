@@ -38,7 +38,7 @@ const CareerAccelerator = ({ careerData }) => {
   const isInView = useInView(sectionRef, { once: false });
   return (
     <main className="bg-white flex items-center" id="career-accelerator">
-      <section className="container py-[100px] flex flex-col items-center">
+      <section className="container py-[50px] flex flex-col items-center">
         {careerData.map((item, index) => (
           <article
             key={index}

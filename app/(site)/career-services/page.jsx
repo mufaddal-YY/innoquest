@@ -17,7 +17,6 @@ const CareerServices = async () => {
           image={item.heroImage}
         />
       ))}
-
       <CareerOpportunities careerData={careerData} />
       <CareerCompass careerData={careerData} />
       <PortfolioCrafting careerData={careerData} />

@@ -40,7 +40,7 @@ const CareerOpportunities = ({ careerData }) => {
   const isInView = useInView(sectionRef, { once: false });
   return (
     <main className="bg-primary flex items-center" id="career-opportunities">
-      <section className="container py-[100px] flex flex-col items-center">
+      <section className="container py-[50px] flex flex-col items-center">
         {careerData.map((item, index) => (
           <article
             key={index}
@@ -60,9 +60,9 @@ const CareerOpportunities = ({ careerData }) => {
                   content={item.careerOppSub}
                   components={myPortableTextComponents}
                   serializers={{
-                    h1: (props) => <h1 style={{ color: "red" }} {...props} />,
+                    h1: (props) => <h1 {...props} />,
                     h4: (props) => (
-                      <h4 style={{ fontSize: "28px" }} {...props} />
+                      <h4 className="text-lg lg:text-2xl" {...props} />
                     ),
                     li: ({ children }) => (
                       <li className="special-list-item">{children}</li>

@@ -16,7 +16,7 @@ const Stats = ({ homeData }) => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
   return (
-    <main className="bg-white items-center py-[100px]">
+    <main className="bg-white items-center py-[50px]">
       <section className="container">
         {homeData.map((item) => (
           <article className="flex flex-col gap-4 lg:flex-row">
