@@ -32,6 +32,9 @@ const myPortableTextComponents = {
         </a>
       );
     },
+    strong: ({ children }) => (
+      <strong style={{ color: "#E36C0A" }}>{children}</strong>
+    ),
   },
 };
 

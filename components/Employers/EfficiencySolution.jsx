@@ -30,6 +30,9 @@ const myPortableTextComponents = {
         </a>
       );
     },
+    strong: ({ children }) => (
+      <strong style={{ color: "#E36C0A" }}>{children}</strong>
+    ),
   },
 };
 
@@ -67,7 +70,7 @@ const EfficiencySolution = ({ employerData }) => {
                     />
                   ),
                   li: ({ children }) => (
-                    <li className="special-list-item">{children}</li>
+                    <li className="special-list-item list-disc leading-loose mb-2">{children}</li>
                   ),
                   normal: ({ children }) => {
                     if (children.length === 1 && children[0] === "") {
@@ -100,7 +103,7 @@ const EfficiencySolution = ({ employerData }) => {
                       />
                     ),
                     li: ({ children }) => (
-                      <li className="special-list-item">{children}</li>
+                      <li className="special-list-item list-disc leading-normal mb-2">{children}</li>
                     ),
                     normal: ({ children }) => {
                       if (children.length === 1 && children[0] === "") {
