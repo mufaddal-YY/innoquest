@@ -131,7 +131,7 @@ export async function getCareerData() {
   return result;
 }
 
-export async function getTestimonialsData() {
+export async function getCandidateTestimonialsData() {
   const result = await client.fetch(
     groq`*[_type == "testimonialsCandidate"]{
         _id,

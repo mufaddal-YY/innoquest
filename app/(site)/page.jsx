@@ -3,15 +3,16 @@ import Testimonials from "@/components/Common/Testimonials";
 import HeroBanner from "@/components/HomePage/HeroBanner";
 import Services from "@/components/HomePage/Services";
 import Stats from "@/components/HomePage/Stats";
-import { getClientTestimonialsData, getHomeData } from "@/sanity/sanity_utils";
+import { getCandidateTestimonialsData, getClientTestimonialsData, getHomeData } from "@/sanity/sanity_utils";
 
 export default async function Home() {
   const homeData = await getHomeData();
-  const testimonialsData = await getClientTestimonialsData();
+  const clientTestimonialsData = await getClientTestimonialsData();
+  const candidateTestimonialsData = await getCandidateTestimonialsData();
   return (
     <main className="mt-4">
       <HeroBanner homeData={homeData} />
-      <Testimonials testimonialsData={testimonialsData} />
+      <Testimonials clientTestimonialsData={clientTestimonialsData} candidateTestimonialsData={candidateTestimonialsData} />
       <Services homeData={homeData} />
       <Stats homeData={homeData} />
       <CallToAction />
