@@ -16,7 +16,7 @@ const PageBanner = ({ headline, subHeadline, image }) => {
             initial={{ x: -20, opacity: 0 }}
             animate={isInView ? { x: 0, opacity: 1 } : {}}
             transition={{ ease: "easeInOut", duration: 0.75 }}>
-            <h4 className="mb-2 text-3xl w-full p-4 lg:w-2/3 text-left lg:text-5xl  text-white font-semibold leading-snug lg:leading-snug">
+            <h4 className="mb-2 text-3xl w-full p-4 lg:w-2/3 text-left lg:text-5xl  text-gray-800 font-bold leading-snug lg:leading-snug">
               {subHeadline}
             </h4>
             {/* <p className="text-gray-600 text-sm lg:text-lg">{subHeadline}</p> */}
