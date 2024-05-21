@@ -21,7 +21,7 @@ const Services = () => {
               }}
               className="absolute inset-0 lg:px-6 sm:px-2 max-w-7xl mx-auto flex items-center justify-center p-2 py-[100px] z-20 overflow-hidden">
               <div className="text-center">
-                <h4 className="lg:text-4xl md:text-3xl text-[28px] text-white leading-normal md:leading-snug lg:leading-snug font-medium mb-4">
+                <h4 className="lg:text-5xl md:text-3xl text-[28px] text-white leading-normal md:leading-snug lg:leading-snug font-medium mb-4">
                   Employer Services
                 </h4>
                 <p className="lg:w-3/4 w-full mx-auto text-white leading-tight font-regular mb-8">
@@ -55,7 +55,7 @@ const Services = () => {
               }}
               className="absolute inset-0 lg:px-6 sm:px-2 max-w-7xl mx-auto flex items-center justify-center p-2 py-[100px] z-20 overflow-hidden">
               <div className="text-center">
-                <h4 className="lg:text-4xl md:text-3xl text-[28px] text-white leading-normal md:leading-snug lg:leading-snug font-medium mb-4">
+                <h4 className="lg:text-5xl md:text-3xl text-[28px] text-white leading-normal md:leading-snug lg:leading-snug font-medium mb-4">
                   Career Services
                 </h4>
                 <p className="lg:w-3/4 w-full mx-auto text-white leading-tight font-regular mb-8">

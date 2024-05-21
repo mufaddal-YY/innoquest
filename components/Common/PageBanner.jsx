@@ -7,7 +7,7 @@ const PageBanner = ({ headline, subHeadline, image }) => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: false });
   return (
-    <main className="bg-yellow-500 items-center bg-cover bg-center bg-no-repeat">
+    <main className="bg-gray-100 items-center bg-cover bg-center bg-no-repeat">
       <section className="flex items-center">
         <article className="flex flex-col lg:flex-row  justify-between items-center w-full">
           <m.div
