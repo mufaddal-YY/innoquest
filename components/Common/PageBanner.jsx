@@ -7,16 +7,16 @@ const PageBanner = ({ headline, subHeadline, image }) => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: false });
   return (
-    <main className="bg-gray-50 items-center bg-cover bg-center bg-no-repeat">
+    <main className="bg-yellow-500 items-center bg-cover bg-center bg-no-repeat">
       <section className="flex items-center">
-        <article className="flex flex-col lg:flex-row  bg-[#ffecdc] justify-between items-center w-full">
+        <article className="flex flex-col lg:flex-row  justify-between items-center w-full">
           <m.div
             className="w-full h-[250px] lg:w-6/12 flex flex-col items-center text-center justify-center"
             ref={sectionRef}
             initial={{ x: -20, opacity: 0 }}
             animate={isInView ? { x: 0, opacity: 1 } : {}}
             transition={{ ease: "easeInOut", duration: 0.75 }}>
-            <h4 className="mb-2 text-3xl w-full p-4 lg:w-2/3 text-left lg:text-5xl text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
+            <h4 className="mb-2 text-3xl w-full p-4 lg:w-2/3 text-left lg:text-5xl  text-white font-semibold leading-snug lg:leading-snug">
               {subHeadline}
             </h4>
             {/* <p className="text-gray-600 text-sm lg:text-lg">{subHeadline}</p> */}

@@ -35,7 +35,7 @@ const Stats = ({ homeData }) => {
                       )}
                       <span>+</span>
                     </h1>
-                    <h6 className="my-2 text-center text-lg lg:text-2xl text-gray-700 font-regular ">
+                    <h6 className="my-2 text-center text-lg text-gray-700 font-regular ">
                       Professional Network
                     </h6>
                     <Image
@@ -70,7 +70,7 @@ const Stats = ({ homeData }) => {
                           )}
                           <span>+</span>
                         </h1>
-                        <h6 className="my-2 text-center text-sm lg:text-2xl text-gray-100 font-regular">
+                        <h6 className="my-2 text-center text-sm lg:text-lg text-gray-100 font-regular">
                           Collective man years of experience
                         </h6>
                       </div>
@@ -91,7 +91,7 @@ const Stats = ({ homeData }) => {
                           )}
                           <span>+</span>
                         </h1>
-                        <h6 className="my-2 text-center text-sm lg:text-2xl text-gray-100 font-regular">
+                        <h6 className="my-2 text-center text-sm lg:text-lg text-gray-100 font-regular">
                           Clients catered
                         </h6>
                       </div>
@@ -112,7 +112,7 @@ const Stats = ({ homeData }) => {
                           )}
                           <span>+</span>
                         </h1>
-                        <h6 className="my-2 text-center text-sm lg:text-2xl text-gray-100 font-regular">
+                        <h6 className="my-2 text-center text-sm lg:text-lg text-gray-100 font-regular">
                           Candidates Recruited
                         </h6>
                       </div>
@@ -133,7 +133,7 @@ const Stats = ({ homeData }) => {
                           )}
                           <span>%</span>
                         </h1>
-                        <h6 className="my-2 text-center text-sm lg:text-2xl text-gray-50 font-regular">
+                        <h6 className="my-2 text-center text-sm lg:text-lg text-gray-50 font-regular">
                           Client associations through reference
                         </h6>
                       </div>

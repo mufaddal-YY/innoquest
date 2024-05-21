@@ -85,10 +85,10 @@ const Testimonials = ({
         className="container mt-8 items-center">
         <div>
           <Tabs defaultValue="client" className=" ">
-            <TabsList className="grid w-full justify-center mx-auto lg:w-[400px] grid-cols-2">
-              <TabsTrigger value="client">Client Testimonials</TabsTrigger>
-              <TabsTrigger value="candidate">
-                Candidates Testimonials
+            <TabsList className="grid justify-center mx-auto w-full lg:w-[400px] grid-cols-2">
+              <TabsTrigger className="text-sm lg:text-md p-1" value="client">Client</TabsTrigger>
+              <TabsTrigger className="text-sm lg:text-md p-1" value="candidate">
+                Candidate
               </TabsTrigger>
             </TabsList>
             <TabsContent value="client">
