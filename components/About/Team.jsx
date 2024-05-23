@@ -36,7 +36,7 @@ const myPortableTextComponents = {
 
 const Team = ({ aboutData }) => {
   return (
-    <main className="bg-gray-50 flex items-center" id="team">
+    <main className="bg-gray-100 flex items-center" id="team">
       <section className="container py-[50px] flex flex-col items-center">
         {aboutData.map((item, index) => (
           <article key={index} className="">
@@ -47,7 +47,7 @@ const Team = ({ aboutData }) => {
                   Our <span className="text-[#E36C0A]">Team</span>
                 </h4>
 
-                <div className="py-4 text-gray-500">
+                <div className="py-4 text-sm text-gray-500">
                   <PortableText
                     content={item.teamDescription}
                     components={myPortableTextComponents}

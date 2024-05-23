@@ -59,7 +59,7 @@ const Values = ({ aboutData }) => {
               {item.ourValues.map((data, index) => (
                 <div
                   key={index}
-                  className={`py-4 text-gray-200 ${index !== item.ourValues.length - 1 ? "border-b-2 border-white" : ""}`}>
+                  className={`py-4 text-sm text-gray-200 ${index !== item.ourValues.length - 1 ? "border-b-2 border-white" : ""}`}>
                   <PortableText
                     content={data.description}
                     components={myPortableTextComponents}

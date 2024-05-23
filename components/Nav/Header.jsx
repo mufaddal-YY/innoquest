@@ -100,7 +100,7 @@ const Header = () => {
                     <NavigationMenuItem>
                       <Link href={"/career-services"}>
                         <NavigationMenuTrigger>
-                          Career Enhancement Solutions
+                          Career Services
                         </NavigationMenuTrigger>
                       </Link>
                       <NavigationMenuContent>
@@ -114,13 +114,13 @@ const Header = () => {
                           <Popover open={isPopoverOpen}>
                             <PopoverTrigger asChild>
                               <li
-                                className="bg-[#222631]  p-2 rounded-sm hover:bg-[#282c38] cursor-pointer"
+                                className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer"
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}>
                                 <Link
                                   className="flex items-center"
                                   href="/career-services/#career-enhancement">
-                                  Career Enhancement
+                                  Career Enhancement Solutions
                                   <ChevronDown
                                     className="relative top-[1px] ml-1 h-3 w-3 transition duration-200"
                                     aria-hidden="true"
@@ -129,7 +129,7 @@ const Header = () => {
                               </li>
                             </PopoverTrigger>
                             <PopoverContent
-                              className="bg-[#222631] w-[350px] mt-1 px-2 py-2 text-white rounded-lg border border-[#E36C0A]"
+                              className="bg-[#222631] w-[350px] mt-1 px-2 py-2  text-white rounded-lg border border-[#E36C0A]"
                               onMouseEnter={handleMouseEnter}
                               onMouseLeave={handleMouseLeave}>
                               <ul>
@@ -380,7 +380,7 @@ const Header = () => {
                                     <Link
                                       className="flex items-center"
                                       href="/career-services/#career-enhancement">
-                                      Career Enhancement
+                                      Career Enhancement Solutions
                                       <ChevronDown
                                         className="relative top-[1px] ml-1 h-3 w-3 transition duration-200"
                                         aria-hidden="true"

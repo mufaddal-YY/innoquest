@@ -61,12 +61,12 @@ const ClientPortfolio = ({ aboutData }) => {
                     key={subIndex}
                     className={`flex flex-col lg:flex-row justify-between items-center w-full mb-10 ${subIndex % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                     <m.div
-                      className="w-full lg:w-1/2"
+                      className="w-full lg:w-2/3"
                       ref={descriptionRef}
                       initial={{ x: -20, opacity: 0 }}
                       animate={isDescriptionInView ? { x: 0, opacity: 1 } : {}}
                       transition={{ ease: "easeInOut", duration: 0.75 }}>
-                      <div className="py-4 text-gray-500">
+                      <div className="py-4 text-[15px] text-gray-500">
                         <PortableText
                           content={industry.industryDesc}
                           components={myPortableTextComponents}
@@ -91,12 +91,15 @@ const ClientPortfolio = ({ aboutData }) => {
                               }
                               return <p>{children}</p>;
                             },
+                            strong: ({ children }) => (
+                              <strong style={{ color: "#E36C0A" }}>{children}</strong>
+                            ),
                           }}
                         />
                       </div>
                     </m.div>
                     <m.div
-                      className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center"
+                      className="w-full lg:w-1/3 p-2 flex mb-4 justify-center items-center"
                       ref={imageRef}
                       initial={{ x: 20, opacity: 0 }}
                       animate={isImageInView ? { x: 0, opacity: 1 } : {}}
@@ -104,7 +107,7 @@ const ClientPortfolio = ({ aboutData }) => {
                       <Image
                         className="rounded-xl mb-4 floating-hover"
                         src={industry.image}
-                        width={500}
+                        width={400}
                         height={500}
                         alt="About Image"
                         priority

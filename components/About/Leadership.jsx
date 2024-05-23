@@ -69,7 +69,7 @@ const Leadership = ({ aboutData }) => {
                     <h4 className="mb-2 text-xl py-2 border-b-2 text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
                       <span className="text-[#222631]">{data.name}</span>
                     </h4>
-                    <div className="py-4 text-gray-500">
+                    <div className="py-4 text-sm text-gray-500">
                       <PortableText
                         content={data.description}
                         components={myPortableTextComponents}
@@ -113,7 +113,7 @@ const Leadership = ({ aboutData }) => {
                       className="rounded-xl mb-4 floating-hover"
                       src={data.image}
                       width={500}
-                      height={500}
+                      height={400}
                       alt="About Image"
                       priority
                     />

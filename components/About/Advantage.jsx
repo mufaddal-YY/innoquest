@@ -53,10 +53,10 @@ const Advantage = ({ aboutData }) => {
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ ease: "easeInOut", duration: 0.75 }}>
               <h4 className="mb-2 text-xl lg:text-3xl text-white font-semibold leading-snug lg:leading-snug tracking-wide">
-                Advantage <span className="text-[#E36C0A]">Innoquest</span>
+                Advantage <span className="text-[#E36C0A]">InnoQuest</span>
               </h4>
               <Separator className="my-2" />
-              <div className="py-4 text-gray-200">
+              <div className="py-4 text-sm text-gray-200">
                 <PortableText
                   content={item.advantageInno}
                   components={myPortableTextComponents}

@@ -56,7 +56,7 @@ const AboutUs = ({ aboutData }) => {
                 Our <span className="text-[#E36C0A]">Story</span>
               </h4>
               <Separator className="my-2" />
-              <div className="py-4 text-gray-500">
+              <div className="py-4 text-sm text-gray-500">
                 <PortableText
                   content={item.ourStory}
                   components={myPortableTextComponents}

@@ -111,7 +111,7 @@ export const InfiniteMovingCards = ({
                 "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
             }}>
             <blockquote>
-              <span className=" relative z-20 text-md leading-[1.6] text-gray-100 font-normal">
+              <span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">
                 <PortableText
                   content={item.clientDesc}
                   components={myPortableTextComponents}
