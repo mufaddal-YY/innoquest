@@ -56,7 +56,7 @@ const CareerAccelerator = ({ careerData }) => {
                 {item.careerAccelerator}
               </h4>
               <Separator className="my-2" />
-              <div className="p-4 text-gray-500">
+              <div className="p-4 text-sm text-gray-500">
                 <PortableText
                   content={item.acceleratorDesc}
                   components={myPortableTextComponents}

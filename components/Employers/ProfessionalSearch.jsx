@@ -87,7 +87,7 @@ const ProfessionalSearch = ({ employerData }) => {
                   }}
                 />
                 <Separator className="my-2" />
-                <div className="py-4 text-gray-200">
+                <div className="py-4 text-sm text-gray-200">
                   <PortableText
                     content={item.professionalDesc}
                     components={myPortableTextComponents}

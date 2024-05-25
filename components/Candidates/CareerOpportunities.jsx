@@ -58,7 +58,7 @@ const CareerOpportunities = ({ careerData }) => {
                 {item.careerOpp}
               </h4>
 
-              <div className="py-4 text-gray-200">
+              <div className="py-4 text-sm text-gray-200">
                 <PortableText
                   content={item.careerOppSub}
                   components={myPortableTextComponents}

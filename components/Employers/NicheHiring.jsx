@@ -87,7 +87,7 @@ const NicheHiring = ({ employerData }) => {
                   }}
                 />
                 <Separator className="my-2" />
-                <div className="py-4 text-gray-500">
+                <div className="py-4 text-sm text-gray-500">
                   <PortableText
                     content={item.nicheDesc}
                     components={myPortableTextComponents}
