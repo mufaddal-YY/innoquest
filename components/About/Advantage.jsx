@@ -37,63 +37,71 @@ const myPortableTextComponents = {
 };
 
 const Advantage = ({ aboutData }) => {
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false });
   return (
     <main className="bg-primary flex items-center" id="advantage-innoquest">
       <section className="container py-[50px] flex flex-col items-center">
-        {aboutData.map((item, index) => (
-          <article
-            key={index}
-            className="flex flex-col lg:flex-row justify-between items-center w-full mb-10">
-            <m.div
-              className="w-full lg:w-1/2 p-4"
-              ref={sectionRef}
-              initial={{ x: -20, opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{ ease: "easeInOut", duration: 0.75 }}>
-              <h4 className="mb-2 text-xl lg:text-3xl text-white font-semibold leading-snug lg:leading-snug tracking-wide">
-                Advantage <span className="text-[#E36C0A]">InnoQuest</span>
-              </h4>
-              <Separator className="my-2" />
-              <div className="py-4 text-sm text-gray-200">
-                <PortableText
-                  content={item.advantageInno}
-                  components={myPortableTextComponents}
-                  serializers={{
-                    h1: (props) => <h1 style={{ color: "red" }} {...props} />,
-                    li: ({ children }) => (
-                      <li className="special-list-item list-disc leading-loose ">
-                        {children}
-                      </li>
-                    ),
-                    normal: ({ children }) => {
-                      if (children.length === 1 && children[0] === "") {
-                        return <br />;
-                      }
-                      return <p>{children}</p>;
-                    },
-                  }}
+        {aboutData.map((item, index) => {
+          const descriptionRef = useRef(null);
+          const imageRef = useRef(null);
+          const isDescriptionInView = useInView(descriptionRef, { once: false });
+          const isImageInView = useInView(imageRef, { once: false });
+
+          return (
+            <article
+              key={index}
+              className="flex flex-col lg:flex-row justify-between items-center w-full mb-10"
+            >
+              <m.div
+                className="w-full lg:w-1/2 p-4"
+                ref={descriptionRef}
+                initial={{ x: -20, opacity: 0 }}
+                animate={isDescriptionInView ? { x: 0, opacity: 1 } : {}}
+                transition={{ ease: "easeInOut", duration: 0.75 }}
+              >
+                <h4 className="mb-2 text-2xl lg:text-3xl text-[#E36C0A] font-semibold leading-snug lg:leading-snug">
+                  Advantage <span className="">InnoQuest</span>
+                </h4>
+                <Separator className="my-2" />
+                <div className="py-4 text-sm text-gray-200">
+                  <PortableText
+                    content={item.advantageInno}
+                    components={myPortableTextComponents}
+                    serializers={{
+                      h1: (props) => <h1 style={{ color: "red" }} {...props} />,
+                      li: ({ children }) => (
+                        <li className="special-list-item ml-4 list-disc leading-loose ">
+                          {children}
+                        </li>
+                      ),
+                      normal: ({ children }) => {
+                        if (children.length === 1 && children[0] === "") {
+                          return <br />;
+                        }
+                        return <p>{children}</p>;
+                      },
+                    }}
+                  />
+                </div>
+              </m.div>
+              <m.div
+                className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center order-first"
+                ref={imageRef}
+                initial={{ x: 20, opacity: 0 }}
+                animate={isImageInView ? { x: 0, opacity: 1 } : {}}
+                transition={{ ease: "easeInOut", duration: 0.75 }}
+              >
+                <Image
+                  className="rounded-xl floating-hover"
+                  src={item.advantageImage}
+                  width={600}
+                  height={500}
+                  alt="Advantage Innoquest"
+                  priority
                 />
-              </div>
-            </m.div>
-            <m.div
-              className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center order-first"
-              ref={sectionRef}
-              initial={{ x: 20, opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{ ease: "easeInOut", duration: 0.75 }}>
-              <Image
-                className="rounded-xl floating-hover"
-                src={item.advantageImage}
-                width={600}
-                height={500}
-                alt="Advantage Innoquest"
-                priority
-              />
-            </m.div>
-          </article>
-        ))}
+              </m.div>
+            </article>
+          );
+        })}
       </section>
     </main>
   );

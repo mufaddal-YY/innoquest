@@ -58,7 +58,7 @@ const Testimonials = ({
       <section className="container items-center">
         <article className="flex justify-between items-center">
           <div className="mb-2">
-            <h3 className="font-semibold text-gray-800 text-4xl max-md:text-3xl text-left items-center">
+            <h3 className="font-semibold text-[#E36C0A] text-2xl lg:text-4xl text-left items-center">
               Testimonials
             </h3>
           </div>

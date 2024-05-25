@@ -62,7 +62,7 @@ const Header = () => {
                       <NavigationMenuContent>
                         <ul className="bg-[#222631] w-[350px] p-2 text-white border-[#222631]">
                           <Link href={"/employer-services/#executive-search"}>
-                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                            <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#2f3442] cursor-pointer">
                               Executive Search Solutions
                             </li>
                           </Link>
@@ -184,25 +184,25 @@ const Header = () => {
                           <Link href={"/about/#industries"}>
                             <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                               Industries
-                            </li>{" "}
+                            </li>
                           </Link>
                           <Separator className="my-2" />
                           <Link href={"/about/#leadership"}>
                             <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                               Leadership Team
-                            </li>{" "}
+                            </li>
                           </Link>
                           <Separator className="my-2" />
                           <Link href={"/about/#team"}>
                             <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                              Our Teams
-                            </li>{" "}
+                              Our Team
+                            </li>
                           </Link>
                           <Separator className="my-2" />
                           <Link href={"/about/#our-values"}>
                             <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                               Our Values
-                            </li>{" "}
+                            </li>
                           </Link>
                         </ul>
                       </NavigationMenuContent>

@@ -52,11 +52,11 @@ const CareerAccelerator = ({ careerData }) => {
               initial={{ x: -20, opacity: 0 }}
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ ease: "easeInOut", duration: 0.75 }}>
-              <h4 className="mb-2 text-xl lg:text-3xl text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
+              <h4 className="mb-2 text-2xl lg:text-3xl text-[#E36C0A] font-semibold leading-snug lg:leading-snug">
                 {item.careerAccelerator}
               </h4>
               <Separator className="my-2" />
-              <div className="py-4 text-gray-500">
+              <div className="p-4 text-gray-500">
                 <PortableText
                   content={item.acceleratorDesc}
                   components={myPortableTextComponents}
@@ -69,7 +69,7 @@ const CareerAccelerator = ({ careerData }) => {
                       <h4 style={{ fontSize: "18px" }} {...props} />
                     ),
                     li: ({ children }) => (
-                      <li className="special-list-item list-disc leading-loose ">
+                      <li className="special-list-item ml-4 list-disc leading-loose ">
                         {children}
                       </li>
                     ),

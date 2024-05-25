@@ -52,7 +52,7 @@ const PortfolioCrafting = ({ careerData }) => {
               initial={{ x: -20, opacity: 0 }}
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ ease: "easeInOut", duration: 0.75 }}>
-              <h4 className="mb-2 text-xl lg:text-3xl text-white font-semibold leading-snug lg:leading-snug tracking-wide">
+              <h4 className="mb-2 text-2xl lg:text-3xl text-[#E36C0A] font-semibold leading-snug lg:leading-snug">
                 {item.portfolioCrafting}
               </h4>
               <Separator className="my-2" />

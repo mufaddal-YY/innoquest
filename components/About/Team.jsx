@@ -43,7 +43,7 @@ const Team = ({ aboutData }) => {
             <div
               className={`flex flex-col lg:flex-row justify-between items-center w-full mb-10 }`}>
               <div className="w-full">
-                <h4 className="mb-2 text-2xl lg:text-3xl text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
+                <h4 className="mb-2 text-2xl lg:text-3xl text-[#E36C0A] font-semibold leading-snug lg:leading-snug">
                   Our <span className="text-[#E36C0A]">Team</span>
                 </h4>
 

@@ -44,7 +44,7 @@ const Leadership = ({ aboutData }) => {
       <section className="container py-[50px] flex flex-col items-center">
         {aboutData.map((item, index) => (
           <article key={index} className="">
-            <h4 className="mb-2 text-2xl lg:text-3xl text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
+            <h4 className="mb-2 text-2xl lg:text-3xl text-[#E36C0A] font-semibold leading-snug lg:leading-snug ">
               <span className="text-[#E36C0A]">Leadership </span> Team
             </h4>
             <Separator className="my-2" />
@@ -66,7 +66,7 @@ const Leadership = ({ aboutData }) => {
                     initial={{ x: -20, opacity: 0 }}
                     animate={isDescriptionInView ? { x: 0, opacity: 1 } : {}}
                     transition={{ ease: "easeInOut", duration: 0.75 }}>
-                    <h4 className="mb-2 text-xl py-2 border-b-2 text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
+                    <h4 className="mb-2 text-xl py-2 border-b-2 text-[#222631] font-semibold leading-snug lg:leading-snug">
                       <span className="text-[#222631]">{data.name}</span>
                     </h4>
                     <div className="py-4 text-sm text-gray-500">

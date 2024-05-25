@@ -54,7 +54,7 @@ const CareerOpportunities = ({ careerData }) => {
               initial={{ y: -20, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ ease: "easeInOut", duration: 0.75 }}>
-              <h4 className="mb-2 text-xl lg:text-3xl text-white font-semibold leading-snug lg:leading-snug tracking-wide">
+              <h4 className="mb-2 text-2xl lg:text-3xl text-[#E36C0A] font-bold leading-snug lg:leading-snug">
                 {item.careerOpp}
               </h4>
 

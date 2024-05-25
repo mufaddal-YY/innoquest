@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef } from "react";
 import { motion as m, useInView } from "framer-motion";
-import Image from "next/image";
 
 const PageBanner = ({ headline, subHeadline, image }) => {
   const sectionRef = useRef(null);
@@ -22,7 +21,7 @@ const PageBanner = ({ headline, subHeadline, image }) => {
             
           </m.div>
           <m.div
-            className="w-full h-[550px] lg:w-6/12 p-2 flex justify-center items-center order-first lg:order-last bg-no-repeat bg-center bg-cover"
+            className="w-full h-[300px] lg:h-[550px] lg:w-6/12 p-2 flex justify-center items-center order-first lg:order-last bg-no-repeat bg-center bg-cover"
             ref={sectionRef}
             initial={{ x: 20, opacity: 0 }}
             animate={isInView ? { x: 0, opacity: 1 } : {}}

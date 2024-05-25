@@ -44,7 +44,7 @@ const ClientPortfolio = ({ aboutData }) => {
         <section className="container py-[50px] flex flex-col items-center">
           {aboutData.map((item, index) => (
             <article key={index} className="">
-              <h4 className="mb-2 text-xl lg:text-3xl text-[#222631] font-semibold leading-snug lg:leading-snug tracking-wide">
+              <h4 className="mb-2 text-2xl lg:text-3xl text-[#222631] font-semibold leading-snug lg:leading-snug">
                 <span className="text-[#E36C0A]">Industries</span>
               </h4>
               <Separator className="my-2" />
@@ -59,7 +59,7 @@ const ClientPortfolio = ({ aboutData }) => {
                 return (
                   <div
                     key={subIndex}
-                    className={`flex flex-col lg:flex-row justify-between items-center w-full mb-10 ${subIndex % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
+                    className={`flex flex-col lg:flex-row justify-between items-center w-full mb-6 ${subIndex % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                     <m.div
                       className="w-full lg:w-2/3"
                       ref={descriptionRef}
@@ -122,7 +122,7 @@ const ClientPortfolio = ({ aboutData }) => {
       </main>
       <main className="bg-primary items-center py-[100px]">
         <section className="container ">
-          <h4 className="mb-8 text-xl lg:text-3xl text-white font-semibold leading-snug lg:leading-snug tracking-wide">
+          <h4 className="mb-8 text-xl lg:text-3xl text-white font-semibold leading-snug lg:leading-snug">
             Some of <span className="text-[#E36C0A]">our customers</span>{" "}
             include:
           </h4>

@@ -22,9 +22,8 @@ const CareerServices = async () => {
       <main>
         <section className="container py-[50px] flex flex-col items-center">
           <div className="">
-            <h4 className="mb-2 text-xl lg:text-3xl text-gray-800 font-semibold leading-snug lg:leading-snug tracking-wide">
-              <span className="text-[#E36C0A]">Career Enhancement</span>
-              Solutions
+            <h4 className="mb-2 text-2xl text-center font-bold lg:text-4xl text-[#E36C0A]  leading-snug">
+              Career Enhancement Solutions
             </h4>
           </div>
         </section>
