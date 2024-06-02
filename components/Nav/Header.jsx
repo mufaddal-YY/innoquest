@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
 import { Logo } from "@/lib/Icons";
@@ -18,20 +19,20 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
 import {
   Sheet,
   SheetClose,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
 import { Separator } from "@/components/ui/separator";
 import { Button } from "../ui/button";
-import { AlignJustify, ChevronDown } from "lucide-react";
+import { AlignJustify, ChevronDown, ChevronRight } from "lucide-react";
 
 const Header = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const handleMouseEnter = () => {
     setIsPopoverOpen(true);
@@ -40,6 +41,18 @@ const Header = () => {
   const handleMouseLeave = () => {
     setIsPopoverOpen(false);
   };
+
+  const handleDelayedScroll = (href) => {
+    router.push(href).then(() => {
+      setTimeout(() => {
+        const element = document.querySelector(href.split("#")[1]);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 2000); // 1-second delay
+    });
+  };
+
   return (
     <main className="bg-primary fixed w-full top-0 z-[1000]">
       <nav className="container py-3 ">
@@ -121,7 +134,7 @@ const Header = () => {
                                   className="flex items-center"
                                   href="/career-services/#career-enhancement">
                                   Career Enhancement Solutions
-                                  <ChevronDown
+                                  <ChevronRight
                                     className="relative top-[1px] ml-1 h-3 w-3 transition duration-200"
                                     aria-hidden="true"
                                   />
@@ -215,7 +228,7 @@ const Header = () => {
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <Link href={"/"}>
+                      <Link href={"/resources"}>
                         <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
                       </Link>
                       <NavigationMenuContent>
@@ -231,12 +244,12 @@ const Header = () => {
                               IQ Insights
                             </li>
                           </Link>
-                          <Separator className="my-2" />
+                          {/* <Separator className="my-2" />
                           <Link href={"/"}>
                             <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                               Newsroom
                             </li>{" "}
-                          </Link>
+                          </Link> */}
                         </ul>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
@@ -262,7 +275,7 @@ const Header = () => {
                           </Link>
                           <Separator className="my-2" />
                           <Link href={"/contact"}>
-                            <li className="bg-[#A222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
+                            <li className="bg-[#282c38] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                               Contact Us
                             </li>
                           </Link>
@@ -300,12 +313,14 @@ const Header = () => {
                     <NavigationMenu>
                       <NavigationMenuList>
                         <NavigationMenuItem>
-                          <NavigationMenuTrigger>
-                            <span className="z-30">Employer Services</span>
-                          </NavigationMenuTrigger>
+                          <Link href={"/employer-services"}>
+                            <NavigationMenuTrigger>
+                              <span className="z-30">Employer Services</span>
+                            </NavigationMenuTrigger>
+                          </Link>
 
                           <NavigationMenuContent>
-                            <ul className="bg-[#222631] w-[280px] lg:w-[350px] p-2 text-white border-[#222631] z-50">
+                            <ul className="bg-[#222631] w-[250px] lg:w-[350px] p-2 text-white border-[#222631] z-50">
                               <Link
                                 href={"/employer-services/#executive-search"}>
                                 <SheetClose>
@@ -355,9 +370,11 @@ const Header = () => {
                     <NavigationMenu>
                       <NavigationMenuList>
                         <NavigationMenuItem>
-                          <NavigationMenuTrigger>
-                            <span className="z-30">Career Services</span>
-                          </NavigationMenuTrigger>
+                          <Link href={"/career-services"}>
+                            <NavigationMenuTrigger>
+                              <span className="z-30">Career Services</span>
+                            </NavigationMenuTrigger>
+                          </Link>
 
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[250px] lg:w-[350px] p-2 text-white border-[#222631] z-50">
@@ -389,7 +406,7 @@ const Header = () => {
                                   </li>
                                 </PopoverTrigger>
                                 <PopoverContent
-                                  className="bg-[#222631] w-[280px] mt-1 px-2 py-2 text-white rounded-lg border border-[#E36C0A]"
+                                  className="bg-[#222631] w-[250px] mt-1 px-2 py-2 text-white rounded-lg border border-[#E36C0A]"
                                   onMouseEnter={handleMouseEnter}
                                   onMouseLeave={handleMouseLeave}>
                                   <ul>
@@ -441,8 +458,9 @@ const Header = () => {
                     <NavigationMenu>
                       <NavigationMenuList>
                         <NavigationMenuItem>
-                          <NavigationMenuTrigger>About</NavigationMenuTrigger>
-
+                          <Link href={"/about"}>
+                            <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                          </Link>
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[250px] lg:w-[350px] p-2 text-white border-[#222631]">
                               <Link href={"/about/#our-story"}>
@@ -509,14 +527,17 @@ const Header = () => {
                     <NavigationMenu>
                       <NavigationMenuList>
                         <NavigationMenuItem>
-                          <Link href={"/"}>
-                            <NavigationMenuTrigger>
-                              Resources
-                            </NavigationMenuTrigger>
+                          <Link href={"/resources"}>
+                            <SheetClose>
+                              <NavigationMenuTrigger>
+                                Resources
+                              </NavigationMenuTrigger>
+                            </SheetClose>
                           </Link>
+
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[250px] lg:w-[350px] px-2 py-2 text-white border-[#222631]">
-                              <Link href={"/"}>
+                              <Link href={"/resources"}>
                                 <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     IQ on Social Media
@@ -526,7 +547,7 @@ const Header = () => {
 
                               <Separator className="my-2" />
 
-                              <Link href={"/"}>
+                              <Link href={"/resources"}>
                                 <SheetClose>
                                   <li className="bg-[#A222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     IQ Insights
@@ -534,7 +555,7 @@ const Header = () => {
                                 </SheetClose>
                               </Link>
 
-                              <Separator className="my-2" />
+                              {/* <Separator className="my-2" />
 
                               <Link href={"/"}>
                                 <SheetClose>
@@ -542,7 +563,7 @@ const Header = () => {
                                     Newsroom
                                   </li>{" "}
                                 </SheetClose>
-                              </Link>
+                              </Link> */}
                             </ul>
                           </NavigationMenuContent>
                         </NavigationMenuItem>
@@ -554,14 +575,17 @@ const Header = () => {
                     <NavigationMenu>
                       <NavigationMenuList>
                         <NavigationMenuItem>
-                          <Link href={"/"}>
-                            <NavigationMenuTrigger>
-                              Work With Us
-                            </NavigationMenuTrigger>
+                          <Link href={"/work-with-us"}>
+                            <SheetClose>
+                              <NavigationMenuTrigger>
+                                Work With Us
+                              </NavigationMenuTrigger>
+                            </SheetClose>
                           </Link>
+
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[250px] lg:w-[350px] px-2 py-2 text-white border-[#222631]">
-                              <Link href={"/"}>
+                              <Link href={"/work-with-us"}>
                                 <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     Opportunities with IQ
@@ -571,7 +595,7 @@ const Header = () => {
 
                               <Separator className="my-2" />
 
-                              <Link href={"/"}>
+                              <Link href={"/work-with-us"}>
                                 <SheetClose>
                                   <li className="bg-[#A222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     Contact Us
@@ -607,7 +631,7 @@ const Header = () => {
           </div>
           <div className="hidden lg:flex">
             <Link href="/contact">
-              <Button className="bg-[#E36C0A] rounded-full">Contact us</Button>
+              <Button className="bg-[#E36C0A] border border-[#E36C0A] rounded-full">Contact us</Button>
             </Link>
           </div>
         </article>

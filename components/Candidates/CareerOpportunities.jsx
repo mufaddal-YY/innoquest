@@ -82,7 +82,10 @@ const CareerOpportunities = ({ careerData }) => {
 
               <div className="flex gap-4 justify-center mx-auto">
                 <div className="my-2">
-                  <Link href={"https://innoquest-careers.blogspot.com/"}>
+                  <Link
+                    href={"https://innoquest-careers.blogspot.com/"}
+                    target="_blank"
+                    rel="noopener noreferrer">
                     <Button className="bg-[#E36C0A]  px-4 border border-[#E36C0A]">
                       Explore Blog
                     </Button>
@@ -90,7 +93,7 @@ const CareerOpportunities = ({ careerData }) => {
                 </div>
 
                 <div className="my-2">
-                  <Link href={"/"}>
+                  <Link href={"/"} target="_blank" rel="noopener noreferrer">
                     <Button className="bg-[#E36C0A]  px-4 border border-[#E36C0A]">
                       Linkedin
                     </Button>

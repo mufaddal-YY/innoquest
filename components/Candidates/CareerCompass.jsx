@@ -73,7 +73,7 @@ const CareerCompass = ({ careerData }) => {
                     serializers={{
                       h1: (props) => <h1 style={{ color: "red" }} {...props} />,
                       li: ({ children }) => (
-                        <li className="special-list-item ml-4 text-lg font-medium text-gray-600 list-disc leading-loose">
+                        <li className="special-list-item ml-4 text-sm font-medium text-gray-600 list-disc leading-loose">
                           {children}
                         </li>
                       ),
@@ -112,7 +112,7 @@ const CareerCompass = ({ careerData }) => {
           initial={{ y: 40, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : {}}
           transition={{ ease: "easeInOut", duration: 0.75 }}>
-          <div className="text-white text-md lg:text-lg font-regular">
+          <div className="text-white text-sm font-regular">
             <p className="py-2">
               Our team of Talent Consultants are equipped to advice and guide
               you, and thus help setting the right direction to your career.
@@ -121,7 +121,7 @@ const CareerCompass = ({ careerData }) => {
             <Separator className="my-2" />
             <div className="flex flex-col lg:flex-row justify-between items-center py-2">
               <div>
-                <p className="text-white text-md font-regular">
+                <p className="text-white text-sm font-regular">
                   Book a slot for a free 30 minute exploratory call here to
                   speak to our career experts:
                 </p>

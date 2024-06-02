@@ -161,6 +161,28 @@ export async function getClientTestimonialsData() {
   return result;
 }
 
+export async function getResourcesData() {
+  const result = await client.fetch(
+    groq`*[_type == "resources"]{
+        _id,
+        _createdAt,
+        socialMedia[]{
+          description,
+          link,
+          "image": image.asset->url,
+        },
+        insights[]{
+          description,
+          link,
+          "image": image.asset->url,
+        }, 
+      }`,
+    {},
+    defaultFetchOptions
+  );
+  return result;
+}
+
 export async function getContactsData() {
   const result = await client.fetch(
     groq`*[_type == "contact"]{

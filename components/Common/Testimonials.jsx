@@ -86,7 +86,9 @@ const Testimonials = ({
         <div>
           <Tabs defaultValue="client" className=" ">
             <TabsList className="grid justify-center mx-auto w-full lg:w-[400px] grid-cols-2">
-              <TabsTrigger className="text-sm lg:text-md p-1" value="client">Client</TabsTrigger>
+              <TabsTrigger className="text-sm lg:text-md p-1" value="client">
+                Client
+              </TabsTrigger>
               <TabsTrigger className="text-sm lg:text-md p-1" value="candidate">
                 Candidate
               </TabsTrigger>
@@ -99,20 +101,13 @@ const Testimonials = ({
                 {clientTestimonialsData.map((item, index) => (
                   <div className="p-2" key={index}>
                     <div
-                      className="lg:h-[350px] h-full items-center border border-[#E36C0A] rounded-2xl text-gray-700 hover:text-gray-300 bg-white hover:bg-primary hover:duration-1000 p-4"
+                      className="lg:h-[300px] h-full items-center border border-[#E36C0A] rounded-2xl text-gray-700 hover:text-gray-300 bg-white hover:bg-primary hover:duration-1000 p-4"
                       style={{
                         backgroundImage: "url('./testimonialsBg.png')",
                         backgroundPosition: "right bottom",
                         backgroundSize: "50%",
                         backgroundRepeat: "no-repeat",
                       }}>
-                      <div className="flex text-[#E89900]">
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                      </div>
                       <div className="text-sm lg:text-[12px] leading-normal font-light py-4">
                         <span>{item.description}</span>
                       </div>
@@ -132,20 +127,13 @@ const Testimonials = ({
                 {candidateTestimonialsData.map((item, index) => (
                   <div className="p-2" key={index}>
                     <div
-                      className="lg:h-[350px] h-full items-center border border-[#E36C0A] rounded-2xl text-gray-700 hover:text-gray-300 bg-white hover:bg-primary hover:duration-1000 p-4"
+                      className="lg:h-[300px] h-full items-center border border-[#E36C0A] rounded-2xl text-gray-700 hover:text-gray-300 bg-white hover:bg-primary hover:duration-1000 p-4"
                       style={{
                         backgroundImage: "url('./testimonialsBg.png')",
                         backgroundPosition: "right bottom",
                         backgroundSize: "50%",
                         backgroundRepeat: "no-repeat",
                       }}>
-                      <div className="flex text-[#E89900]">
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                        <FaStar />
-                      </div>
                       <div className="text-sm lg:text-[12px] leading-normal font-light py-4">
                         <span>{item.description}</span>
                       </div>

@@ -3,6 +3,7 @@ import careerServices from "./schemas/careerServices";
 import contact from "./schemas/contact";
 import employer from "./schemas/employer";
 import home from "./schemas/home";
+import resources from "./schemas/resources";
 import testimonialsCandidate from "./schemas/testimonialsCandidate";
 import testimonialsClients from "./schemas/testimonialsClients";
 export const schema = {
@@ -13,6 +14,8 @@ export const schema = {
     employer,
     testimonialsCandidate,
     testimonialsClients,
+    resources,
+    
     contact,
   ],
 }
