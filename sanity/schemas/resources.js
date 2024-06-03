@@ -12,6 +12,11 @@ export default {
           type: "object",
           fields: [
             {
+              name: "headline",
+              title: "Headline",
+              type: "string",
+            },
+            {
               name: "description",
               title: "Description",
               type: "string",
@@ -42,6 +47,11 @@ export default {
         {
           type: "object",
           fields: [
+            {
+              name: "headline",
+              title: "Headline",
+              type: "string",
+            },
             {
               name: "description",
               title: "Description",

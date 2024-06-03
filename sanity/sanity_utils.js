@@ -167,11 +167,13 @@ export async function getResourcesData() {
         _id,
         _createdAt,
         socialMedia[]{
+          headline,
           description,
           link,
           "image": image.asset->url,
         },
         insights[]{
+          headline,
           description,
           link,
           "image": image.asset->url,

@@ -14,14 +14,17 @@ const Insights = ({ resourceData }) => {
             </h4>
             <Separator className="my-2" />
             {item.insights.map((data) => (
-              <article className="w-full md:w-1/3 lg:w-1/4 p-2">
+              <article className="w-full md:w-1/3 lg:w-1/3 p-2">
                 <article className="bg-white shadow-sm shadow-gray-50 rounded-2xl">
-                  <div className="h-full md:h-[250px] lg:h-[250px] overflow-hidden rounded-t-2xl">
+                  <div className="h-[180px] overflow-hidden rounded-t-2xl">
                     <Image width={500} height={500} src={data.image} />
                   </div>
                   <div className="p-4">
                     <div className="my-4">
-                      <p className="text-sm font-regular font-gray-700">
+                      <h4 className="mb-2 text-md font-semibold">
+                        {data.headline}
+                      </h4>
+                      <p className="text-sm text-gray-600 font-regular font-gray-700">
                         {data.description}
                       </p>
                     </div>
@@ -32,7 +35,7 @@ const Insights = ({ resourceData }) => {
                         target="_blank"
                         rel="noopener noreferrer">
                         <div className="bg-[#E36C0A] flex items-center justify-center border border-[#E36C0A] text-sm text-white hover:text-gray-800 px-4 py-2 rounded-full hover:bg-white cursor-pointer">
-                          Learn more
+                          Read more
                           <ChevronRight
                             className="relative top-[1px] ml-1 h-3 w-3 transition duration-200"
                             aria-hidden="true"
