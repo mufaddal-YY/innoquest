@@ -1,11 +1,8 @@
 "use client";
-
-import Image from "next/image";
 import Slider from "react-slick";
 import { useRef } from "react";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiMiniArrowLongLeft } from "react-icons/hi2";
-import { FaStar } from "react-icons/fa";
 import { Separator } from "@/components/ui/separator"; // Correct import path
 import { motion as m, useInView } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"; // Correct import path
@@ -54,7 +51,7 @@ const Testimonials = ({
   const sliderRef = useRef(null);
 
   return (
-    <main className="bg-white items-center py-[100px]">
+    <main className="bg-white items-center py-[50px]">
       <section className="container items-center">
         <article className="flex justify-between items-center">
           <div className="mb-2">
@@ -101,7 +98,7 @@ const Testimonials = ({
                 {clientTestimonialsData.map((item, index) => (
                   <div className="p-2" key={index}>
                     <div
-                      className="lg:h-[300px] h-full items-center border border-[#E36C0A] rounded-2xl text-gray-700 hover:text-gray-300 bg-white hover:bg-primary hover:duration-1000 p-4"
+                      className="lg:h-[300px] h-full text-center items-center border border-[#E36C0A] rounded-2xl text-gray-700 hover:text-gray-300 bg-white hover:bg-primary hover:duration-1000 p-4"
                       style={{
                         backgroundImage: "url('./testimonialsBg.png')",
                         backgroundPosition: "right bottom",
@@ -127,7 +124,7 @@ const Testimonials = ({
                 {candidateTestimonialsData.map((item, index) => (
                   <div className="p-2" key={index}>
                     <div
-                      className="lg:h-[300px] h-full items-center border border-[#E36C0A] rounded-2xl text-gray-700 hover:text-gray-300 bg-white hover:bg-primary hover:duration-1000 p-4"
+                      className="lg:h-[300px] h-full text-center items-center border border-[#E36C0A] rounded-2xl text-gray-700 hover:text-gray-300 bg-white hover:bg-primary hover:duration-1000 p-4"
                       style={{
                         backgroundImage: "url('./testimonialsBg.png')",
                         backgroundPosition: "right bottom",

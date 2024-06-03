@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Separator } from "../ui/separator";
 import PortableText from "react-portable-text";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const myPortableTextComponents = {
   types: {
@@ -127,9 +128,14 @@ const CareerCompass = ({ careerData }) => {
                 </p>
               </div>
               <div className="justify-start pt-4">
-                <Button className="bg-white text-gray-700 hover:text-white">
-                  Book Slot
-                </Button>
+                <Link
+                  href={"https://calendly.com/contact-gn-b"}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <Button className="bg-white text-gray-700 hover:text-white">
+                    Book Slot
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

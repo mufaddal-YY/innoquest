@@ -33,7 +33,7 @@ const myPortableTextComponents = {
       );
     },
     strong: ({ children }) => (
-      <strong style={{ color: '#E36C0A' }}>{children}</strong>
+      <strong style={{ color: "#E36C0A" }}>{children}</strong>
     ),
   },
 };
@@ -61,7 +61,7 @@ const Leadership = ({ aboutData }) => {
                   key={index}
                   className={`flex flex-col lg:flex-row justify-between items-center w-full mb-10 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                   <m.div
-                    className="w-full lg:w-1/2"
+                    className="w-full lg:w-8/12 p-2"
                     ref={descriptionRef}
                     initial={{ x: -20, opacity: 0 }}
                     animate={isDescriptionInView ? { x: 0, opacity: 1 } : {}}
@@ -98,19 +98,22 @@ const Leadership = ({ aboutData }) => {
                       />
                     </div>
                     <div className=" ">
-                      <Link href={data.link} target="_blank" rel="noopener noreferrer">
+                      <Link
+                        href={data.link}
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <FaLinkedinIn className="text-4xl text-white bg-[#0077b5] p-1 rounded-sm" />
                       </Link>
                     </div>
                   </m.div>
                   <m.div
-                    className="w-full lg:w-1/2 p-2 flex mb-4 justify-center items-center"
+                    className="w-full lg:w-4/12 p-2 flex justify-center items-center"
                     ref={imageRef}
                     initial={{ x: 20, opacity: 0 }}
                     animate={isImageInView ? { x: 0, opacity: 1 } : {}}
                     transition={{ ease: "easeInOut", duration: 0.75 }}>
                     <Image
-                      className="rounded-xl mb-4 floating-hover"
+                      className="rounded-xl p-3 floating-hover"
                       src={data.image}
                       width={500}
                       height={400}

@@ -12,11 +12,11 @@ const Footer = async () => {
       <main className="py-[20px] items-center bg-gray-100">
         <section className="container items-center flex flex-col lg:flex-row justify-between">
           <article>
-            <div className="bg-primary mb-2 px-2 py-1 items-center">{Logo}</div>
+            <div className="bg-primary my-2 px-2 py-1 items-center">{Logo}</div>
           </article>
           <article>
             {contactData.map((item) => (
-              <div className="flex gap-4 items-center mb-2">
+              <div className="flex gap-4 items-center my-2">
                 <Link
                   href={item.linkedin}
                   target="_blank"

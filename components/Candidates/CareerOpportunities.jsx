@@ -93,7 +93,7 @@ const CareerOpportunities = ({ careerData }) => {
                 </div>
 
                 <div className="my-2">
-                  <Link href={"/"} target="_blank" rel="noopener noreferrer">
+                  <Link href={"https://www.linkedin.com/company/innoquest-consulting/"} target="_blank" rel="noopener noreferrer">
                     <Button className="bg-[#E36C0A]  px-4 border border-[#E36C0A]">
                       Linkedin
                     </Button>

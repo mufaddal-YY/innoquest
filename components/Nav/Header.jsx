@@ -459,7 +459,9 @@ const Header = () => {
                       <NavigationMenuList>
                         <NavigationMenuItem>
                           <Link href={"/about"}>
-                            <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
+                            <NavigationMenuTrigger>
+                              About Us
+                            </NavigationMenuTrigger>
                           </Link>
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[250px] lg:w-[350px] p-2 text-white border-[#222631]">
@@ -528,11 +530,9 @@ const Header = () => {
                       <NavigationMenuList>
                         <NavigationMenuItem>
                           <Link href={"/resources"}>
-                            <SheetClose>
-                              <NavigationMenuTrigger>
-                                Resources
-                              </NavigationMenuTrigger>
-                            </SheetClose>
+                            <NavigationMenuTrigger>
+                              Resources
+                            </NavigationMenuTrigger>
                           </Link>
 
                           <NavigationMenuContent>
@@ -576,11 +576,9 @@ const Header = () => {
                       <NavigationMenuList>
                         <NavigationMenuItem>
                           <Link href={"/work-with-us"}>
-                            <SheetClose>
-                              <NavigationMenuTrigger>
-                                Work With Us
-                              </NavigationMenuTrigger>
-                            </SheetClose>
+                            <NavigationMenuTrigger>
+                              Work With Us
+                            </NavigationMenuTrigger>
                           </Link>
 
                           <NavigationMenuContent>

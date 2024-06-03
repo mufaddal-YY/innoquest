@@ -97,9 +97,9 @@ const AboutUs = ({ aboutData }) => {
                 transition={{ ease: "easeInOut", duration: 0.75 }}
               >
                 <Image
-                  className="rounded-xl mb-4 floating-hover"
+                  className="rounded-xl floating-hover"
                   src={item.aboutImage}
-                  width={600}
+                  width={450}
                   height={500}
                   alt="About Image"
                   priority
