@@ -5,7 +5,7 @@ import { Separator } from "../ui/separator";
 
 const SocialMedia = ({ resourceData }) => {
   return (
-    <main className="bg-gray-100" id="social-media">
+    <main className="bg-white" id="social-media">
       <section className="container py-[50px]">
         {resourceData.map((item) => (
           <article className="flex flex-wrap">
@@ -14,8 +14,8 @@ const SocialMedia = ({ resourceData }) => {
             </h4>
             <Separator className="my-2" />
             {item.socialMedia.map((data) => (
-              <article className="w-full md:w-1/3 lg:w-1/3 md:p-2 lg:p-2 mt-4">
-                <article className="bg-white shadow-sm shadow-gray-50 rounded-2xl">
+              <article className="w-full md:w-1/3 lg:w-1/3 md:p-4 lg:p-4 mt-4 ">
+                <article className="bg-white  rounded-2xl shadow-[0px_0px_10px_1px_#edf2f7] hover:scale-[1.05] transition-transform duration-1000">
                   <div className="h-[180px] overflow-hidden rounded-t-2xl">
                     <Image width={500} height={400} src={data.image} />
                   </div>
