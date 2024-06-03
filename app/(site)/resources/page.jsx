@@ -1,7 +1,7 @@
 import Banner from "@/components/Resources/Banner";
 import SocialMedia from "@/components/Resources/SocialMedia";
 import { getResourcesData } from "@/sanity/sanity_utils";
-import BannerImage from "./../../../public/resourcesBanner.jpg"
+import BannerImage from "./../../../public/resourcesBanner.jpg";
 import Insights from "@/components/Resources/Insights";
 import CallToAction from "@/components/Common/CallToAction";
 

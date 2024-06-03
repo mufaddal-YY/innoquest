@@ -5,7 +5,7 @@ import { Separator } from "../ui/separator";
 
 const Insights = ({ resourceData }) => {
   return (
-    <main className="bg-wwhite">
+    <main className="bg-wwhite" id="insights">
       <section className="container py-[50px]">
         {resourceData.map((item) => (
           <article className="flex flex-wrap p-4">

@@ -5,7 +5,7 @@ import { Separator } from "../ui/separator";
 
 const SocialMedia = ({ resourceData }) => {
   return (
-    <main className="bg-gray-100">
+    <main className="bg-gray-100" id="social-media">
       <section className="container py-[50px]">
         {resourceData.map((item) => (
           <article className="flex flex-wrap">

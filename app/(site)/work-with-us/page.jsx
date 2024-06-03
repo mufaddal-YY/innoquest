@@ -1,8 +1,17 @@
+import Banner from "@/components/Resources/Banner";
+import BannerImage from "./../../../public/workwithus.jpg";
+import CallToAction from "@/components/Common/CallToAction";
+import Opportunities from "@/components/WorkWithUs/Opportunities";
 
-const WorkWithUs = () => {
+const WorkWithUs = async () => {
   return (
-    <div>WorkWithUs</div>
-  )
-}
+    <main className="mt-14">
+      <Banner image={BannerImage} />
+      <Opportunities />
 
-export default WorkWithUs
+      <CallToAction />
+    </main>
+  );
+};
+
+export default WorkWithUs;

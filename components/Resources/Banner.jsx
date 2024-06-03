@@ -7,7 +7,7 @@ const Banner = ({ image }) => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: false });
   return (
-    <main className=" border-b border-[#E36C0A] items-center bg-cover bg-center bg-no-repeat">
+    <main className="border-b border-[#E36C0A] items-center bg-cover bg-center bg-no-repeat">
       <section className="flex items-center">
         <article className="flex flex-col lg:flex-row  justify-between items-center w-full">
           <m.div
