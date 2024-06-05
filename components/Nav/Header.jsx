@@ -42,17 +42,6 @@ const Header = () => {
     setIsPopoverOpen(false);
   };
 
-  const handleDelayedScroll = (href) => {
-    router.push(href).then(() => {
-      setTimeout(() => {
-        const element = document.querySelector(href.split("#")[1]);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 2000); // 1-second delay
-    });
-  };
-
   return (
     <main className="bg-primary fixed w-full top-0 z-[1000]">
       <nav className="container py-3 ">
@@ -268,13 +257,13 @@ const Header = () => {
                       </Link>
                       <NavigationMenuContent>
                         <ul className="bg-[#222631] w-[350px] px-2 py-2 text-white border-[#222631]">
-                          <Link href={"/work-with-us"}>
+                          <Link href={"/work-with-us/#opportunities"}>
                             <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                               Opportunities with IQ
                             </li>
                           </Link>
                           <Separator className="my-2" />
-                          <Link href={"/work-with-us"}>
+                          <Link href={"/work-with-us/#contact"}>
                             <li className="bg-[#282c38] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                               Contact Us
                             </li>
@@ -583,7 +572,7 @@ const Header = () => {
 
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[250px] lg:w-[350px] px-2 py-2 text-white border-[#222631]">
-                              <Link href={"/work-with-us"}>
+                              <Link href={"/work-with-us/#opportunities"}>
                                 <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     Opportunities with IQ
@@ -593,7 +582,7 @@ const Header = () => {
 
                               <Separator className="my-2" />
 
-                              <Link href={"/work-with-us"}>
+                              <Link href={"/work-with-us/#contact"}>
                                 <SheetClose>
                                   <li className="bg-[#A222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     Contact Us

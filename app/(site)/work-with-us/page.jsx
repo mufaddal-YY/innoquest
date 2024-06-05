@@ -11,7 +11,10 @@ const WorkWithUs = async () => {
     <main className="mt-14">
       <Banner image={BannerImage} />
       <Opportunities workData={workData} />
+      <article id="contact">
+
       <CallToAction />
+      </article>
     </main>
   );
 };

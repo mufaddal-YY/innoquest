@@ -44,7 +44,7 @@ const myPortableTextComponents = {
 
 const Opportunities = ({ workData }) => {
   return (
-    <main className="bg-gray-100">
+    <main className="bg-gray-100" id="opportunities">
       <section className="container py-[50px]">
         <h4 className="text-2xl text-[#E36C0A] lg:text-3xl font-semibold">
           Opportunities with IQ
