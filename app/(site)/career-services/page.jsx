@@ -22,7 +22,7 @@ const CareerServices = async () => {
       <main>
         <section className="container py-[50px] flex flex-col items-center">
           <div className="">
-            <h4 className="mb-2 text-2xl text-center font-bold lg:text-4xl text-[#E36C0A]  leading-snug">
+            <h4 className="text-2xl text-center font-bold lg:text-4xl text-[#E36C0A] leading-snug">
               Career Enhancement Solutions
             </h4>
           </div>

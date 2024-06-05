@@ -184,6 +184,22 @@ export async function getResourcesData() {
   );
   return result;
 }
+export async function getWorkData() {
+  const result = await client.fetch(
+    groq`*[_type == "work"]{
+        _id,
+        _createdAt,
+        opportunities[]{
+          headline,
+          description,
+        },
+        "image": image.asset->url,
+      }`,
+    {},
+    defaultFetchOptions
+  );
+  return result;
+}
 
 export async function getContactsData() {
   const result = await client.fetch(
