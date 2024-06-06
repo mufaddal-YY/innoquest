@@ -78,7 +78,7 @@ const CareerAccelerator = ({ careerData }) => {
                         />
                       ),
                       li: ({ children }) => (
-                        <li className="special-list-item ml-4 list-disc leading-loose ">
+                        <li className="special-list-item ml-4 list-disc leading-snug ">
                           {children}
                         </li>
                       ),
