@@ -51,12 +51,16 @@ const Footer = async () => {
           <div className="container flex flex-col lg:flex-row justify-between items-center">
             <article className="">
               <span className="text-xs font-regular text-white">
-                © 2024 Innoquest | All Rights Reserved.
+                © 2024 Red Velvette Integrated Services | All Rights Reserved.
               </span>
             </article>
-            <article>
+            <article className="flex gap-2">
               <span className="text-xs font-regular text-white">
-                Privacy Policy | Terms and Conditions
+                Privacy Policy
+              </span>
+              |
+              <span className="text-xs font-regular text-white">
+                Terms and Conditions
               </span>
             </article>
           </div>

@@ -600,11 +600,11 @@ const Header = () => {
                     <NavigationMenu>
                       <NavigationMenuList>
                         <NavigationMenuItem>
-                          <Link href="/contact" legacyBehavior passHref>
+                          <Link href="/contact">
                             <SheetClose>
                               <NavigationMenuLink
                                 className={navigationMenuTriggerStyle()}>
-                                Contact Us
+                                <li>Contact Us</li>
                               </NavigationMenuLink>
                             </SheetClose>
                           </Link>
