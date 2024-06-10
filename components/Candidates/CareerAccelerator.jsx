@@ -31,7 +31,9 @@ const myPortableTextComponents = {
       );
     },
     strong: ({ children }) => (
-      <strong className="mb-2" style={{ color: "#E36C0A" }}>{children}</strong>
+      <strong className="mb-2" style={{ color: "#E36C0A" }}>
+        {children}
+      </strong>
     ),
   },
 };
@@ -88,6 +90,9 @@ const CareerAccelerator = ({ careerData }) => {
                         }
                         return <p>{children}</p>;
                       },
+                      strong: ({ children }) => (
+                        <strong className="mb-2">{children}</strong>
+                      ),
                     }}
                   />
                 </div>
