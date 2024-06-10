@@ -113,7 +113,7 @@ const Leadership = ({ aboutData }) => {
                     animate={isImageInView ? { x: 0, opacity: 1 } : {}}
                     transition={{ ease: "easeInOut", duration: 0.75 }}>
                     <Image
-                      className="rounded-xl p-3 floating-hover"
+                      className="rounded-xl p-6 floating-hover"
                       src={data.image}
                       width={500}
                       height={400}

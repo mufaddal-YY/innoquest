@@ -46,9 +46,34 @@ const Opportunities = ({ workData }) => {
   return (
     <main className="bg-gray-100" id="opportunities">
       <section className="container py-[50px]">
-        <h4 className="text-2xl text-[#E36C0A] lg:text-3xl font-semibold">
+        <h4 className="text-2xl text-[#E36C0A] mb-4 lg:text-3xl font-semibold">
           Opportunities with IQ
         </h4>
+        {workData.map((item) => (
+          <PortableText
+            content={item.description}
+            components={myPortableTextComponents}
+            serializers={{
+              h1: (props) => <h1 style={{ color: "red" }} {...props} />,
+              h4: (props) => <h4 style={{ fontSize: "28px" }} {...props} />,
+              h5: (props) => (
+                <h5 className="mb-2 " style={{ fontSize: "18px" }} {...props} />
+              ),
+              li: ({ children }) => (
+                <li className="special-list-item ml-4 list-disc leading-loose ">
+                  {children}
+                </li>
+              ),
+              normal: ({ children }) => {
+                if (children.length === 1 && children[0] === "") {
+                  return <br />;
+                }
+                return <p className="text-gray-600">{children}</p>;
+              },
+            }}
+          />
+        ))}
+
         <Separator className="my-4" />
         {workData.map((item) => {
           const descriptionRef = useRef(null);

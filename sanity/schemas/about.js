@@ -18,14 +18,10 @@ export default {
       title: "Meta Keywords",
       type: "string",
     },
-    {
-      name: "headline",
-      title: "Headline",
-      type: "string",
-    },
+    
     {
       name: "subHeadline",
-      title: "Sub Headline",
+      title: "Headline",
       type: "string",
     },
     {

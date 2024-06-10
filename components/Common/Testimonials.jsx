@@ -3,9 +3,9 @@ import Slider from "react-slick";
 import { useRef } from "react";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiMiniArrowLongLeft } from "react-icons/hi2";
-import { Separator } from "@/components/ui/separator"; // Correct import path
+import { Separator } from "@/components/ui/separator";
 import { motion as m, useInView } from "framer-motion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"; // Correct import path
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Testimonials = ({
   clientTestimonialsData,
@@ -13,7 +13,7 @@ const Testimonials = ({
 }) => {
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 1000,
     autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 1,

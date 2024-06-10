@@ -13,10 +13,10 @@ export const schema = {
     about,
     careerServices,
     employer,
+    resources,
+    work,
+    contact,
     testimonialsCandidate,
     testimonialsClients,
-    resources,
-    work,    
-    contact,
   ],
-}
+};

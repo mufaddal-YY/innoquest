@@ -604,7 +604,7 @@ const Header = () => {
                             <SheetClose>
                               <NavigationMenuLink
                                 className={navigationMenuTriggerStyle()}>
-                                Contact
+                                Contact Us
                               </NavigationMenuLink>
                             </SheetClose>
                           </Link>

@@ -10,10 +10,9 @@ const ContactDetails = () => {
       <section className="container flex flex-col gap-4 py-[100px]">
         <article className="justify-center mx-auto">
           <div className="justify-center mx-auto text-center">
-            <h4 className="font-semibold text-2xl lg:text-5xl md:text-2xl py-4 text-[#E36C0A]">
-              Contact Us
+            <h4 className="font-semibold text-2xl lg:text-3xl md:text-2xl py-4 text-[#E36C0A]">
+              Reach Out and Connect: We're Here to Help!
             </h4>
-            <p>Reach Out and Connect: We're Here to Help!</p>
           </div>
         </article>
         <article className="flex flex-col lg:flex-row items-center">

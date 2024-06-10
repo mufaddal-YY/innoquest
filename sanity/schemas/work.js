@@ -4,6 +4,16 @@ export default {
   type: "document",
   fields: [
     {
+      name: "description",
+      title: "Description",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
+    },
+    {
       name: "opportunities",
       title: "Opportunities with IQ",
       type: "array",

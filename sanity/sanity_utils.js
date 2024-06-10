@@ -189,6 +189,7 @@ export async function getWorkData() {
     groq`*[_type == "work"]{
         _id,
         _createdAt,
+        description,
         opportunities[]{
           headline,
           description,
