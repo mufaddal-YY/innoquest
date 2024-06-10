@@ -31,7 +31,7 @@ const myPortableTextComponents = {
       );
     },
     strong: ({ children }) => (
-      <strong style={{ color: "#E36C0A" }}>{children}</strong>
+      <strong className="mb-2" style={{ color: "#E36C0A" }}>{children}</strong>
     ),
   },
 };
