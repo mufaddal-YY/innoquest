@@ -184,6 +184,7 @@ export async function getResourcesData() {
   );
   return result;
 }
+
 export async function getWorkData() {
   const result = await client.fetch(
     groq`*[_type == "work"]{
@@ -195,6 +196,34 @@ export async function getWorkData() {
           description,
         },
         "image": image.asset->url,
+      }`,
+    {},
+    defaultFetchOptions
+  );
+  return result;
+}
+
+export async function getPrivacyData() {
+  const result = await client.fetch(
+    groq`*[_type == "privacy"]{
+        _id,
+        _createdAt,
+        headline,
+        description,
+      }`,
+    {},
+    defaultFetchOptions
+  );
+  return result;
+}
+
+export async function getTermsData() {
+  const result = await client.fetch(
+    groq`*[_type == "terms"]{
+        _id,
+        _createdAt,
+        headline,
+        description,
       }`,
     {},
     defaultFetchOptions

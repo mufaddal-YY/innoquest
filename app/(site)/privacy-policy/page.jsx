@@ -1,9 +1,13 @@
-import React from 'react'
+import PrivacyCard from "@/components/Privacy/PrivacyCard";
+import { getPrivacyData } from "@/sanity/sanity_utils";
 
-const PrivacyPolicy = () => {
+const PrivacyPolicy = async () => {
+  const privacyData = await getPrivacyData();
   return (
-    <div>PrivacyPolicy</div>
-  )
-}
+    <main className="mt-14">
+      <PrivacyCard privacyData={privacyData} />
+    </main>
+  );
+};
 
-export default PrivacyPolicy
+export default PrivacyPolicy;

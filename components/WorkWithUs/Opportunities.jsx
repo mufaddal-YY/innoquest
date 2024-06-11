@@ -39,6 +39,9 @@ const myPortableTextComponents = {
     strong: ({ children }) => (
       <strong style={{ color: "#E36C0A" }}>{children}</strong>
     ),
+    a: (props) => (
+      <a className="text-blue-500 hover:underline" {...props} />
+    ),
   },
 };
 
@@ -70,6 +73,9 @@ const Opportunities = ({ workData }) => {
                 }
                 return <p className="text-gray-600">{children}</p>;
               },
+              a: (props) => (
+                <a className="text-blue-500 hover:underline" {...props} />
+              ),
             }}
           />
         ))}

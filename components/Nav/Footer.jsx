@@ -89,7 +89,7 @@ const Footer = async () => {
           <Separator className="my-2" />
 
           <article className="text-center">
-            <span className="text-xs font-regular text-white">
+            <span className="text-xs font-regular text-gray-300">
               Thank you for visiting our page. Please be aware - InnoQuest
               Consulting does not charge a fee from candidates at any stage of
               the recruitment process. To report any misrepresentation or fraud,
