@@ -1,35 +1,25 @@
-"use client";
-import React, { useState, useRef } from "react";
+import Link from "next/link";
+import { Button } from "../ui/button";
 
-import ContactForm from "./Form";
-import { motion as m, useInView } from "framer-motion";
 const CallToAction = () => {
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true });
   return (
-    <main className="container w-full py-[50px] lg:w-8/12">
-      <m.section
-        className="flex items-center bg-primary rounded-[28px]"
-        ref={sectionRef}
-        initial={{ y: 40, opacity: 0 }}
-        animate={isInView ? { y: 0, opacity: 1 } : {}}
-        transition={{ ease: "easeInOut", duration: 0.75 }}>
-        <article
-          className="w-full lg:w-5/12 py-[200px] rounded-l-[28px] hidden lg:block bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('./contact.jpg')" }}
-          role="img"
-          aria-label="Contact background image"></article>
-        <article className="w-full p-6 lg:w-7/12">
-          <div className="w-full px-2 mx-auto">
-            <header>
-              <h4 className="text-xl text-white font-medium mb-4">
-                Contact Us
-              </h4>
-            </header>
-            <ContactForm />
+    <main className="bg-[#E36C0A] py-24">
+      <section className="max-w-7xl mx-auto px-2 lg:px-4">
+        <div className="flex flex-col justify-center">
+          <div className="my-4">
+            <h1 className="text-xl lg:text-[32px] text-center leading-tight font-bold text-white">
+              Connect with our team to know how we can help you
+            </h1>
           </div>
-        </article>
-      </m.section>
+          <div className="flex justify-center my-2">
+            <Link href={"/contact"}>
+              <Button className="bg-white text-md py-4 px-6 hover:text-white text-gray-800 rounded-full border border-white">
+                Contact Us
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };
