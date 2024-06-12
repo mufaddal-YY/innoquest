@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 const CallToAction = () => {
   return (
-    <main className="bg-[#E36C0A] py-24">
+    <main className="bg-[#E36C0A] py-[30px]">
       <section className="max-w-7xl mx-auto px-2 lg:px-4">
         <div className="flex flex-col justify-center">
           <div className="my-4">

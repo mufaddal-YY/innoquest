@@ -21,13 +21,6 @@ const Footer = async () => {
             <div className="flex justify-center">
               <div className="inline-block bg-primary px-2 py-1">{Logo}</div>
             </div>
-            <div className="">
-              <div className={myFont.className}>
-                <span className="text-sm">
-                  A unit of Red Velvette Integrated Services
-                </span>
-              </div>
-            </div>
           </article>
           <article>
             {contactData.map((item) => (
@@ -89,11 +82,11 @@ const Footer = async () => {
           <Separator className="my-2" />
 
           <article className="text-center p-2">
-            <span className="text-xs font-regular text-gray-300">
-              Thank you for visiting our page. Please be aware - InnoQuest
-              Consulting does not charge a fee from candidates at any stage of
-              the recruitment process. To report any misrepresentation or fraud,
-              please mail us at{" "}
+            <span className="text-[10px] font-regular text-gray-300">
+              InnoQuest Consulting is a part of Red Velvette Integrated
+              Services. Please be aware - InnoQuest Consulting does not charge a
+              fee from candidates at any stage of the recruitment process. To
+              report any misrepresentation or fraud, please mail us at{" "}
               <a href="mailto:contact@innoquest.in">contact@innoquest.in</a>
             </span>
           </article>
