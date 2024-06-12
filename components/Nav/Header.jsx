@@ -224,7 +224,7 @@ const Header = () => {
                         <ul className="bg-[#222631] w-[350px] px-2 py-2 text-white border-[#222631]">
                           <Link href={"/resources/#social-media"}>
                             <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                              IQ on Social Media
+                              IQ Bytes
                             </li>
                           </Link>
                           <Separator className="my-2" />
@@ -529,7 +529,7 @@ const Header = () => {
                               <Link href={"/resources"}>
                                 <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
-                                    IQ on Social Media
+                                    IQ Bytes
                                   </li>
                                 </SheetClose>{" "}
                               </Link>
