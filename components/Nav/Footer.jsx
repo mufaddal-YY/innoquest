@@ -64,7 +64,7 @@ const Footer = async () => {
       <main className=" items-center">
         <section className="bg-primary py-[20px]">
           <div className="container flex flex-col lg:flex-row justify-between items-center">
-            <article className="">
+            <article className="text-center lg:text-left">
               <span className="text-xs font-regular text-white">
                 © 2024 Red Velvette Integrated Services | All Rights Reserved.
               </span>
@@ -76,7 +76,7 @@ const Footer = async () => {
                 </span>
               </Link>
               <Separator
-                className="border border-white"
+                className="border border-white h-4"
                 orientation="vertical"
               />
               <Link href={"/terms-conditions"}>
@@ -88,7 +88,7 @@ const Footer = async () => {
           </div>
           <Separator className="my-2" />
 
-          <article className="text-center">
+          <article className="text-center p-2">
             <span className="text-xs font-regular text-gray-300">
               Thank you for visiting our page. Please be aware - InnoQuest
               Consulting does not charge a fee from candidates at any stage of
