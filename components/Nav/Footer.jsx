@@ -82,7 +82,7 @@ const Footer = async () => {
           <Separator className="my-2" />
 
           <article className="text-center p-2">
-            <span className="text-[10px] font-regular text-gray-300">
+            <span className="text-[10px] leading-snug font-regular text-gray-300">
               InnoQuest Consulting is a part of Red Velvette Integrated
               Services. Please be aware - InnoQuest Consulting does not charge a
               fee from candidates at any stage of the recruitment process. To
