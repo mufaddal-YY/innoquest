@@ -526,7 +526,7 @@ const Header = () => {
 
                           <NavigationMenuContent>
                             <ul className="bg-[#222631] w-[250px] lg:w-[350px] px-2 py-2 text-white border-[#222631]">
-                              <Link href={"/resources"}>
+                              <Link href={"/resources/#insights"}>
                                 <SheetClose>
                                   <li className="bg-[#222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     IQ Bytes
@@ -536,7 +536,7 @@ const Header = () => {
 
                               <Separator className="my-2" />
 
-                              <Link href={"/resources"}>
+                              <Link href={"/resources/#social-media"}>
                                 <SheetClose>
                                   <li className="bg-[#A222631] p-2 rounded-sm hover:bg-[#282c38] cursor-pointer">
                                     IQ Insights
