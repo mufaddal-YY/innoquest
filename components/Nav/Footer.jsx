@@ -57,11 +57,13 @@ const Footer = async () => {
       <main className=" items-center">
         <section className="bg-primary py-[20px]">
           <div className="container flex flex-col lg:flex-row justify-between items-center">
+            
             <article className="text-center lg:text-left">
               <span className="text-xs font-regular text-white">
                 © 2024 Red Velvette Integrated Services | All Rights Reserved.
               </span>
             </article>
+            
             <article className="flex items-center gap-2">
               <Link href={"/privacy-policy"}>
                 <span className="text-xs font-regular text-white">
@@ -79,14 +81,15 @@ const Footer = async () => {
               </Link>
             </article>
           </div>
+
           <Separator className="my-2" />
 
-          <article className="text-center p-2">
-            <span className="text-[10px] leading-snug font-regular text-gray-300">
+          <article className="text-center  p-1">
+            <span className=" font-regular text-[9px] leading-tight text-gray-300">
               InnoQuest Consulting is a part of Red Velvette Integrated
               Services. Please be aware - InnoQuest Consulting does not charge a
               fee from candidates at any stage of the recruitment process. To
-              report any misrepresentation or fraud, please mail us at{" "}
+              report any misrepresentation or fraud, please mail us at
               <a href="mailto:contact@innoquest.in">contact@innoquest.in</a>
             </span>
           </article>
