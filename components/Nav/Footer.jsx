@@ -89,8 +89,7 @@ const Footer = async () => {
               InnoQuest Consulting is a part of Red Velvette Integrated
               Services. Please be aware - InnoQuest Consulting does not charge a
               fee from candidates at any stage of the recruitment process. To
-              report any misrepresentation or fraud, please mail us at
-              <a href="mailto:contact@innoquest.in">contact@innoquest.in</a>
+              report any misrepresentation or fraud, please mail us at  <a href="mailto:contact@innoquest.in">contact@innoquest.in</a>
             </span>
           </article>
         </section>
