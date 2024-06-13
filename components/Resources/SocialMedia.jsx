@@ -5,12 +5,12 @@ import { Separator } from "../ui/separator";
 
 const SocialMedia = ({ resourceData }) => {
   return (
-    <main className="bg-white" id="social-media">
+    <main className="bg-white" id="bytes">
       <section className="container py-[50px]">
         {resourceData.map((item) => (
           <article className="flex flex-wrap">
             <h4 className="text-2xl text-[#E36C0A] lg:text-3xl font-semibold">
-              IQ on Social Media
+              IQ Bytes
             </h4>
             <Separator className="my-2" />
             {item.socialMedia.map((data) => (
