@@ -62,7 +62,17 @@ export default {
       type: "string",
     },
     {
+      name: "networkDesc",
+      title: "Professional Network",
+      type: "string",
+    },
+    {
       name: "manYears",
+      title: "Man Years",
+      type: "string",
+    },
+    {
+      name: "manYearsDesc",
       title: "Man Years",
       type: "string",
     },
@@ -72,13 +82,28 @@ export default {
       type: "string",
     },
     {
+      name: "clientsDesc",
+      title: "Clients Catered",
+      type: "string",
+    },
+    {
       name: "candidates",
+      title: "Candidates Recruited",
+      type: "string",
+    },
+    {
+      name: "candidatesDesc",
       title: "Candidates Recruited",
       type: "string",
     },
 
     {
       name: "clientAssociated",
+      title: "Clients Associated",
+      type: "string",
+    },
+    {
+      name: "clientAssociatedDesc",
       title: "Clients Associated",
       type: "string",
     },

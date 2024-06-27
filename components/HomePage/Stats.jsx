@@ -36,7 +36,7 @@ const Stats = ({ homeData }) => {
                       <span>+</span>
                     </h1>
                     <h6 className="my-2 text-center text-lg text-gray-700 font-regular ">
-                      Professional Network
+                      {item.networkDesc}
                     </h6>
                     <Image
                       className="justify-center mx-auto py-6 floating duration-1000"
@@ -71,7 +71,7 @@ const Stats = ({ homeData }) => {
                           <span>+</span>
                         </h1>
                         <h6 className="my-2 text-center text-sm lg:text-lg text-gray-100 font-regular">
-                          Collective man years of experience
+                          {item.manYearsDesc}
                         </h6>
                       </div>
                     )}
@@ -92,7 +92,7 @@ const Stats = ({ homeData }) => {
                           <span>+</span>
                         </h1>
                         <h6 className="my-2 text-center text-sm lg:text-lg text-gray-100 font-regular">
-                          Clients catered
+                          {item.clientsDesc}
                         </h6>
                       </div>
                     )}
@@ -113,7 +113,7 @@ const Stats = ({ homeData }) => {
                           <span>+</span>
                         </h1>
                         <h6 className="my-2 text-center text-sm lg:text-lg text-gray-100 font-regular">
-                          Candidates Recruited
+                          {item.candidatesDesc}
                         </h6>
                       </div>
                     )}
@@ -134,7 +134,7 @@ const Stats = ({ homeData }) => {
                           <span>%</span>
                         </h1>
                         <h6 className="my-2 text-center text-sm lg:text-lg text-gray-50 font-regular">
-                          Client associations through reference
+                          {item.clientAssociatedDesc}
                         </h6>
                       </div>
                     )}
