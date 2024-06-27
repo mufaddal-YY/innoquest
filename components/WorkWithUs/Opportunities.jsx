@@ -100,7 +100,7 @@ const Opportunities = ({ workData }) => {
                   {item.opportunities.map((data) => (
                     <Accordion type="single" collapsible className="w-full">
                       <AccordionItem value="item-1">
-                        <AccordionTrigger className="text-gray-800 text-lg hover:text-[#E36C0A]">
+                        <AccordionTrigger className="text-[#E36C0A] text-lg hover:text-gray-800">
                           <span>{data.headline}</span>
                         </AccordionTrigger>
                         <AccordionContent>
