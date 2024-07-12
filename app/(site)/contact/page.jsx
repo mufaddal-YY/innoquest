@@ -26,7 +26,7 @@ const Contact = async() => {
             <div className="flex-grow"></div>
           </article>
 
-          <article className="w-full p-6 lg:w-7/12 bg-primary rounded-r-[28px] flex items-center">
+          <article className="w-full p-6 lg:w-7/12 bg-primary rounded-[28px] lg:rounded-r-[28px] flex items-center">
             <div className="w-full px-2 mx-auto">
               <div>
                 <h4 className="text-xl text-white font-medium mb-4">
