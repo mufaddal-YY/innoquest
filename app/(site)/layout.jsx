@@ -2,6 +2,8 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import ProgressBars from "@/components/Nav/ProgressBar";
 import { Suspense } from "react";
+import { Toaster } from "sonner";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Header from "@/components/Nav/Header";
@@ -22,7 +24,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         <Header />
-        <main >{children}</main>
+        <main>
+          {children}
+          <Toaster closeButton position="top-right" richColors />
+        </main>
         <Footer />
         <Suspense>
           <ProgressBars />

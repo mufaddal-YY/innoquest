@@ -242,6 +242,7 @@ export async function getContactsData() {
         _id,
         _createdAt,
         email,
+        phone,
         linkedin,
         facebook,
         blogSpot,    

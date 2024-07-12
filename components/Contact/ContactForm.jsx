@@ -7,13 +7,15 @@ const ContaactForm = () => {
   return (
     <main className="container">
       <section className="flex flex-col lg:flex-row">
-        <article className="w-full lg:w-1/2">
-          <Image
-            className="rounded-xl"
-            src={ContactImage}
-            width={300}
-            height={400}
-          />
+        <article className="w-full lg:w-1/2 flex items-center justify-center">
+          <div className="relative w-full max-w-md h-full pb-[75%]">
+            <Image
+              className="absolute top-0 left-0 w-full h-full object-cover rounded-xl"
+              src={ContactImage}
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
         </article>
         <article className="w-full lg:w-1/2">
           <ContactForm />
