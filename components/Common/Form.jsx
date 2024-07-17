@@ -36,11 +36,11 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (formData) => {
 
     setIsLoading(true);
     try {
-      await sendEmail(data);
+      await sendEmail(formData);
       toast.success("Email Sent Successfully!");
       form.reset();
     } catch (error) {
@@ -53,7 +53,7 @@ const ContactForm = () => {
   return (
     <>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <form action={sendEmail} onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <FormField
             control={form.control}
             name="name"
