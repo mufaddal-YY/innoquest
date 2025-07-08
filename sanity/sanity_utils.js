@@ -129,6 +129,9 @@ export async function getCareerData() {
        careerAccelerator,
        acceleratorDesc,
        "acceleratorImage": acceleratorImage.asset->url,
+       cta,
+       ctaDesc,
+       ctalink,
       }`,
     {},
     defaultFetchOptions

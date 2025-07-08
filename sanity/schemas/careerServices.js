@@ -121,5 +121,20 @@ export default {
         hotspot: true, // <-- Defaults to false
       },
     },
+    {
+      name: "cta",
+      title: "CTA Headline",
+      type: "string",
+    },
+    {
+      name: "ctaDesc",
+      title: "CTA Description",
+      type: "string",
+    },
+    {
+      name: "ctalink",
+      title: "CTA Link",
+      type: "string",
+    },
   ],
 };

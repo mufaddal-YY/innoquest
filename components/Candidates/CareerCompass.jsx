@@ -107,7 +107,7 @@ const CareerCompass = ({ careerData }) => {
           );
         })}
 
-        <m.div
+        {/* <m.div
           className="rounded-2xl p-4 lg:p-8 bg-[#E36C0A]"
           ref={sectionRef}
           initial={{ y: 40, opacity: 0 }}
@@ -139,7 +139,7 @@ const CareerCompass = ({ careerData }) => {
               </div>
             </div>
           </div>
-        </m.div>
+        </m.div> */}
       </section>
     </main>
   );
