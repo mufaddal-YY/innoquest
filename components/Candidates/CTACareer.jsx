@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CTACareer = ({ careerData }) => {
   return (
-    <main>
+    <main className="bg-gray-100">
       <section className="container">
         {careerData.map((item, index) => (
           <div className="rounded-2xl p-4 lg:p-8 bg-[#E36C0A]" key={index}>
