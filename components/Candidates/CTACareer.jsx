@@ -9,7 +9,7 @@ const CTACareer = ({ careerData }) => {
         {careerData.map((item, index) => (
           <div className="rounded-2xl p-4 lg:p-8 bg-[#E36C0A]" key={index}>
             <div className="text-white text-sm font-regular">
-              <p className="py-2">{item?.cta} hi</p>
+              <p className="py-2">{item?.cta}</p>
               <Separator className="my-2" />
               <div className="flex flex-col lg:flex-row justify-between items-center py-2">
                 <div>
