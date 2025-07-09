@@ -17,18 +17,13 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Innoquest Consulting | Home",
-  icons: {
-    icon: "/favicon.ico",
-  },
+
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="theme-color" content="#ffffff" />
-      </head>
+      
       <body className={poppins.className}>
         <Header />
         <main>
